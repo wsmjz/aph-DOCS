@@ -1,0 +1,26 @@
+{
+  "name": "vuepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "applehome-ui": "^1.2.9",
+    "core-js": "^2.6.11",
+    "element-ui": "^2.13.1",
+    "highlight.js": "^10.0.3",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "vuepress": "^1.5.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
