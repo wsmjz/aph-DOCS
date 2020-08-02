@@ -36,7 +36,7 @@
 - 地球磁场南北.所以睡觉应南北向
 ### 道.术
 ### 八卦六爻占卜预测
-### 其他
+### 生活小常识
 - 尖锐物件应包裹，锋芒毕露
 - 精油
    - 檀香.招财，静心，寺庙中
@@ -169,6 +169,7 @@
 
 ## 网站搜集
 ### 学习
+- [协作画图软件](https://processon.com/) 微信登录
 - [博客园](https://blog.csdn.net)
 - [掘金](https://juejin.im/timeline)
 - [mdn](https://developer.mozilla.org/zh-CN/)

@@ -2,7 +2,7 @@ module.exports = {
   title: '苹果家+',
   // description: '沉于当下，面向未来，内容杂道九宗，望之issue',
   description: '汇聚百川，终成江河',
-  port: 1234,
+  port: 65533,
   themeConfig: {
     repo: 'https://github.com/wsmjz',
     // 自定义仓库链接文字。

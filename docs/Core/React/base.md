@@ -11,7 +11,10 @@
 - refs
 - 组件组合，嵌套，插槽
    - {props.children}
-   - {props.left}  <aa left={内容组件}>
+   - {props.left}
+   ```js
+   {props.left}  <aa left={内容组件}>
+   ```
 - 组件可以接受任意 props，包括基本数据类型，React 元素以及函数
 - 想要在组件间复用非 UI 的功能，我们建议将其提取为一个单独的 JavaScript 模块，如函数、对象或者类。组件可以直接引入（import）而无需通过 extend 继承它们
 - js es6 中 class 的方法默认不会绑定 this 所以需要手动call 绑定this
