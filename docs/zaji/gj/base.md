@@ -11,6 +11,7 @@
 2. git checkout name 切换到新分支
 3. git pull origin name 拉取某个分支
 4. git push --set-upstream origin name 推送到某个分支
+5. 丢弃当前内容
 
 - 第一次链接远程仓库需使用 `git push -u origin master` 之后可以直接`git push`
 - 合并分支流程
@@ -30,5 +31,11 @@ mddir // 生成当前目录的 markdown
 # C端产品 B端产品
 - cm 系统
 - bm 系统
+# Excel
+- 计算公式
+> =CONCAT("""","marketplan.LanguageB",D2,"""",": ","""",E2,"""",",")
 
+# 在线编辑Word文档方案
+- 永中软件（第三方提供）
+- 操作本地WPS接口，需配合服务器打开写入权限
 
