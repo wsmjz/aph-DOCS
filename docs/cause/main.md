@@ -157,6 +157,8 @@
 越是害怕什么就会发生什么
 
 ## 认知
+- 其实人家想看到的是你的平庸与不优秀 不让让人嫉妒 可适当向同等级的人展示优点
+- 学会取舍，找到自己的东西，做了加法，也应学会做减法，欲望是无止境的，要做好，优秀自己能力范围内的事物
 - 工作、家庭、健康、朋友和心灵
 - 勿说精通，应说熟悉掌握
 - 说话做事使人舒服，说别人喜欢听的
@@ -166,17 +168,88 @@
 - 平台不对，方向不对，努力白费
 - 先装大核桃，再装芝麻绿豆，先做重要的事
 - 罗列你需要成功的理由是什么，你的梦想是什么
+## 社区博文
+- [sweetalert](https://sweetalert.bootcss.com/docs/#methods)
+- [前端工程师地址](http://gjpykj.ddns.net:8015/#/inputText)
+- [码灵程序论坛文档地址](https://nav.imaring.com/)
+- [49个不知道的css](https://juejin.im/post/5d3eca78e51d4561cb5dde12#heading-44)
+- [各种文档](https://www.kancloud.cn/)
+   - [Happy Coding待整理](https://qq1037305420.github.io/Blog/)(https://qq1037305420.github.io/Blog/nav.03.webpack/#%E4%BE%9D%E8%B5%96%E5%B7%A5%E5%85%B7webpack-cli)
+   - [珠峰1](https://giserman001.github.io/blogs/miniprogram/)
+   - [webpack](https://www.webpackjs.com/concepts/plugins/)
+   - [axios文档](https://www.kancloud.cn/yunye/axios/234845)
+   - [webpack文档](https://www.kancloud.cn/ywfwj2008/webpack-handbook/84591)
+   - [npm文档](https://www.kancloud.cn/shellway/npm-doc/199981)
+   - [d3文档](https://www.kancloud.cn/luponu/d3js-api-zh) [luponu作者其他文档](https://www.kancloud.cn/@luponu?tab=book&page=3)
+
+- [几毛社区](www.baidu.com)
+- [二叉树](https://www.cnblogs.com/wangjiachen666/p/10155507.html)
+- [next中文文档](https://docs.www3.jklib.org/next9/)
+- [阮一峰](http://www.ruanyifeng.com/home.html)
+- [萤石云](http://open.ys7.com/doc/zh/book/4.x/android-sdk.html?q=)
+- [vue各种插件](https://www.toutiao.com/i6718405521088446988/?timestamp=1564450212&app=news_article&group_id=6718405521088446988&req_id=20190730093011010018026159736CF92)
+- css
+   - [张鑫旭](https://www.zhangxinxu.com)
+      - [canvas中文文档](https://www.canvasapi.cn/)
+      - [svg文档](https://www.zhangxinxu.com/GitHub/demo-Snap.svg/demo/basic/)
+   - [css森林](http://blog.cssforest.org/)
+      - [权重比例](http://blog.cssforest.org/2011/05/19/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86CSS%E7%9A%84%E6%9D%83%E9%87%8D.html)
+   - [真不知道的css小点点](https://juejin.im/post/5d3eca78e51d4561cb5dde12)
+- 掘金小册
+   - [books](https://juejin.im/books)
+- 其他
+   - [大前端](http://www.daqianduan.com/)
+   - [腾讯ISUX](https://www.qianduan.net/)
+   - [小胡子](https://www.barretlee.com/)
+   - [canvas动画](http://www.jq22.com/webqd2797)
+   - [资源清单](https://segmentfault.com/a/1190000000416914)
+   - [中文书籍概览](https://github.com/justjavac/free-programming-books-zh_CN)
+   - [面试](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Question)
+   - [算法](https://www.cnblogs.com/rubylouvre) 司徒正美-大名鼎鼎的MVVM框架avalon.js，就是此人出品
+   - [jq框架设计](https://www.cnblogs.com/winter-cn/archive/2013/02/20/2919855.html)
+- 社区
+  - [前端乱炖](http://html-js.com/)
+  - [大漠](https://www.w3cplus.com/)
+   - [svg](https://www.w3cplus.com/svg/building-progress-ring-quickly.html)
+  - [前端网](http://www.w3cfuns.com/)
+  - [简书](https://www.jianshu.com/u/1f3c9af35ae8)
+  
+  - [博客园](https://wz.cnblogs.com/)
+  
+  - [vuepress文章](https://b.himnt.top/blog/base/)
+  
 
 ## 网站搜集
+### 协同
+- [语雀](https://www.yuque.com/xytech/flutter)
+  - [资料](https://www.yuque.com/advanced-frontend)
+  - [2](https://www.yuque.com/xytech/flutter)
+- [读书笔记-印象笔记](https://app.yinxiang.com/LoggedOut.action?userId=18145738)
+- 有道
+- [画流程图网站]
 ### 学习
+- shouwang.ping@gmail.com
+- [题库进阶-重要](https://muyiy.cn/question/)
+   - [去github](https://github.com/yygmind/blog)
+- [组件库](https://www.toutiao.com/i6718405521088446988/?timestamp=1564450212&app=news_article&group_id=6718405521088446988&req_id=20190730093011010018026159736CF92)
+- 知乎
+- 腾讯课堂
+- 开课吧
+- 极光学院
+- 慕课网
 - [博客园](https://blog.csdn.net)
+   - https://blog.csdn.net/future_todo/article/details/60956942
 - [掘金](https://juejin.im/timeline)
+   - [一百问](https://juejin.im/post/5d23e750f265da1b855c7bbe)
 - [mdn](https://developer.mozilla.org/zh-CN/)
 - [CSDN](https://blog.csdn.net)
 - [segmentfault](https://segmentfault.com)
-- [简书](https://github.com/wsmjz)
+   - 手机号 hhldm888!
+- [简书](https://www.jianshu.com/u/1f3c9af35ae8)
 - [看云](www.kancloud.cn)
+   - github登录
 - [码农网](https://www.codercto.com/)
+- [问题博客](https://github.com/yygmind/blog)
 - [醉牛前端](http://f2er.club/)
 - [六爻系统](http://www.fullstackjavascript.cn:3000/liuyao)
 
@@ -189,12 +262,41 @@
 - [食草](https://haveyuan.github.io/)
 - [js私塾](https://yibiankeji.github.io/baodian/js/1.html)
 - [二开后台系统](https://panjiachen.github.io/vue-element-admin/#/pdf/index)
-- [画流程图网站]
 - react 组件库封装
+- [百度流量统计](https://tongji.baidu.com/research/)
+- https://www.json.cn/
+- https://sheetjs.com/
+- https://nwjs.io/
 ### ui交互效果
+- [站酷](https://www.zcool.com.cn)
+   - [AE](https://www.zcool.com.cn/work/ZMjM0NDc0OTI=.html)
 - [1] (https://mili.yibiankeji.com/)
 - [启动页] (https://www.ui.cn/detail/377241.html)
+- [wa](https://haremu.com/)
+- [aimingoo待处理技术](https://aimingoo.github.io/)
+- [素材火](https://www.sucaihuo.com/templates)
 
 ### 其他
-- [我要自学网]
+- [程序员客栈](https://www.proginn.com/)
+- [猪八戒](https://task.zbj.com/?w=6&k=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91)
+- [我要自学网](https://www.51zxw.net/)
+   - https://www.html.cn/
 - [我知道]
+- [我告诉你](https://msdn.itellyou.cn/ )
+- [不死鸟](https://hao.su/)
+- FunDebug
+   - https://blog.fundebug.com/2017/04/04/nodejs-async-await/
+   - https://blog.fundebug.com/2018/07/24/vs-extensions/
+   - https://blog.fundebug.com/2017/07/17/10-javascript-difficulties/
+   - https://blog.fundebug.com/2018/05/29/30-amazing-vuejs-open-source/
+- http://shuilizijin.jianyitong.com/minProject/main/index.html
+- https://cn.eslint.org/
+- https://docxtemplater.readthedocs.io/en/latest/
+- https://www.electronjs.org/ 桌面应用
+- https://fivexu.github.io/ui/#/dotRun
+
+- https://www.kancloud.cn/jikeytang/qq/87646
+- https://legacy.gitbook.com/book/llh911001/mostly-adequate-guide-chinese/discussions?state=open&page=2
+- https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html#%E4%BB%8B%E7%BB%8D
+
+- http://www.ionic.wang/article-index-id-57.html

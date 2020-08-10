@@ -34,6 +34,45 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 3. 建易通签字
 4. 脚手架， 压缩，推送npm社区
 
+- request...新特性做动画
+1. 百度统计页面访问量 微信分享 支付 桌面应用 NW electron cordar  / 中国的 JavaScript 和 Ruby 社区 / 中国开源社区
+2. clipboard.min.js / 递归函数 加return 与 不加return 的区别 / 文件流 转换
+3. docker 微服务
+4. world press ，wix
+5. sortablejs 拖拽
+7. electron，egg.js-基于koa 抓包
+8. 搜索ssh视频
+9. ast 虚拟节点树  js调用摄像头拍照上传照片
+10. 文件上传,下载 封装 / 表单提交封装 / 图片裁剪，合成
+11. iframe 应用场景 
+   - 摄像头调用
+   - 自定义表单打印
+12. [fx粒子动画](https://fivexu.github.io/ui/#/tooltip)
+14. webview webApp
+15. 资金审批小数点位数 正则匹配
+16. [腾讯新版前端组件框架 omi](https://www.cnblogs.com/iamzhanglei/p/9810365.html)
+17. [函数](https://www.cnblogs.com/_franky/archive/2012/12/13/2815624.html)
+18. [http优化](https://www.cnblogs.com/GrayZhang)
+19. requestAnimationFrame
+20. [浏览器原理](http://jinlong.github.io/)
+21. Roter人员组件问题 现在为外部判断选中值 需改进 convenienceModule>projectManagement>projectlist>securitycheck>securitylookedit
+22. 扫描二维码 访问网页
+23. 根据对象属性值 true,false缓存部分路由
+24. 单页面 多页面
+25. node做中间层(件)/ 流处理成Excel / 处理pdf数据流 / 浏览器控制台 / truck try promise awit / ts装饰器 与 装饰器模式
+26. 研究jquery 源码 -障碍：正则
+27. 选择器 栈排列 / vue断点调试 / render方法
+28. 手机事件处理hammer. js / fastclick
+29. codemirror
+30. 重要的是 学习方法 
+31. cordova有个热推送的插件
+32. cavans 合成 播放video
+33. 腾讯课堂 - 波波老师算法 / wap2app 套壳
+34. tapable 
+36. 自定义表单 - 拖拽添加
+37. Vue.nextTick() 与 this.nextTick(callback) 与 this.$nextTick(callback)
+38. echarts双y轴 双x轴设置
+
 ## 运维
 - nglix
 - docker
@@ -95,4 +134,7 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
    - 参数列表混乱，有做好防御编程，不处理错误（接口错误，超时，重复提交等等
    - 魔法数字，魔法字符串，且没说明。
    - 糟糕数据结构 / 糟糕命名 （其实上面的具体代码示例也存在）
-   - aabc
+   - 鼠标，元素，滚动条位置信息 clientX scroolTop 
+   - 动态组件is
+   - 珠峰-两个&&符号 返回值
+   - 动态路由匹配
