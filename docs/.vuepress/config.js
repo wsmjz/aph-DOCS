@@ -173,7 +173,7 @@ module.exports = {
           'base'
         ]
       }, {
-        title: '提问？？',
+        title: '常见问题',
         collapsable: true,
         children: [
           'vue-review/note'
@@ -316,7 +316,7 @@ module.exports = {
       // ================================================杂记
       '/zaji/': [{
         title: '杂记',
-        sidebarDepth: 1,
+        sidebarDepth: 2,
         collapsable: false,
         children: [
           'js/base'

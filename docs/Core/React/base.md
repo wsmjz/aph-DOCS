@@ -3,15 +3,20 @@
    1. 单向数据流
    2. 技能规范要求，限制少，灵活，重原生
    - hooks 可以跨度传值 相当于 provide/inject
-## 核心
+## 基础
+- 组件参数类型校验
 - 组件传值（Context）
   - 跨组件传值（广播）
   - 控制反转（将逻辑提升到组件树的更高层次来处理）
   - 组件组合
 - refs
 - 组件组合，嵌套，插槽
-   - {props.children}
-   - {props.left}  <aa left={内容组件}>
+```js
+// 插槽
+<div left={组件}></div>
+{props.children}
+{props.left}  
+```
 - 组件可以接受任意 props，包括基本数据类型，React 元素以及函数
 - 想要在组件间复用非 UI 的功能，我们建议将其提取为一个单独的 JavaScript 模块，如函数、对象或者类。组件可以直接引入（import）而无需通过 extend 继承它们
 - js es6 中 class 的方法默认不会绑定 this 所以需要手动call 绑定this
@@ -158,10 +163,10 @@ constructor(props) {
   // 其实是es6 中的this绑定方法
   this.handleClick = this.handleClick.bind(this);
 }
-<a onClick={this.handleClick}>
+<a onClick={this.handleClick}></a>
 
 // 2. 箭头函数保证this
-<a onClick={() => {this.handleClick()}}>
+<a onClick={() => {this.handleClick()}}></a>
 ```
 ## 注意项
 - 方法写做箭头函数，保证this为当前类的实例
@@ -172,7 +177,7 @@ constructor(props) {
 - 对于使用 ES6 的 class 关键字创建的 React 组件，组件中的方法遵循与常规 ES6 class 相同的语法规则。这意味着这些方法不会自动绑定 this 到这个组件实例。 你需要在 constructor 中显式地调用 .bind(this)
 ```js
    constructor(props) {
-      // 这一行很重要！
-      this.handleClick = this.handleClick.bind(this);
+    // 这一行很重要！
+    this.handleClick = this.handleClick.bind(this);
   }
 ```
