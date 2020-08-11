@@ -1,82 +1,5 @@
 # 杂记
-**八大知识体系**
 
-一：JS原理类
-数据类型，作用域，原型，对象，继承，异步，递归等
-
-二:JS框架类
-JQuery,React,Vue,Angular,包括app框架。ReactiveNative,Ionic等
-
-三：关联知识点
-浏览器兼容，webpack,http请求，http与https以及http状态码，前端安全(XSS漏洞/sql注入/CSRF漏洞/Cookie安全策略/传输安全),
-Redux,mobx,Less,数据结构，算法，小程序等。
-
-四:前端性能优化
-减少http请求，优化接口，精简代码，代码规范，压缩图片，雪碧图，使用CDN
-
-五:NodeJs
-express框架，promise,CommonJS,require
-
-六:服务器语言
-java或者C#,至少要会写项目
-
-七:运维
-了解数据库，会写一般的Linux命令，项目部署的相关配置
-
-八:前瞻性学习
-目前流行的趋势，区块链，AI等
-
-## 待处理问题
-<!-- 11. 珠峰-两个&&符号 返回值 -->
-<!-- 1. 动态路由匹配 -->
-<!-- 动态组件is -->
-<!-- 鼠标，元素，滚动条位置信息 clientX scroolTop -->
-- request...新特性做动画
-1. 百度统计页面访问量 微信分享 支付 桌面应用 NW electron cordar  / 中国的 JavaScript 和 Ruby 社区 / 中国开源社区
-2. clipboard.min.js / 递归函数 加return 与 不加return 的区别 / 文件流 转换
-3. docker 微服务
-4. world press ，wix
-5. sortablejs 拖拽
-7. electron，egg.js-基于koa 抓包
-8. 搜索ssh视频
-9. ast 虚拟节点树  js调用摄像头拍照上传照片
-10. 文件上传,下载 封装 / 表单提交封装 / 图片裁剪，合成
-11. iframe 应用场景 
-   - 摄像头调用
-   - 自定义表单打印
-12. [fx粒子动画](https://fivexu.github.io/ui/#/tooltip)
-14. webview webApp
-15. 资金审批小数点位数 正则匹配
-16. [腾讯新版前端组件框架 omi](https://www.cnblogs.com/iamzhanglei/p/9810365.html)
-17. [函数](https://www.cnblogs.com/_franky/archive/2012/12/13/2815624.html)
-18. [http优化](https://www.cnblogs.com/GrayZhang)
-19. requestAnimationFrame
-20. [浏览器原理](http://jinlong.github.io/)
-21. Roter人员组件问题 现在为外部判断选中值 需改进 convenienceModule>projectManagement>projectlist>securitycheck>securitylookedit
-22. 扫描二维码 访问网页
-23. 根据对象属性值 true,false缓存部分路由
-24. 单页面 多页面
-25. node做中间层(件)/ 流处理成Excel / 处理pdf数据流 / 浏览器控制台 / truck try promise awit / ts装饰器 与 装饰器模式
-26. 研究jquery 源码 -障碍：正则
-27. 选择器 栈排列 / vue断点调试 / render方法
-28. 手机事件处理hammer. js / fastclick
-29. codemirror
-30. 重要的是 学习方法 
-31. cordova有个热推送的插件
-32. cavans 合成 播放video
-33. 腾讯课堂 - 波波老师算法 / wap2app 套壳
-34. tapable 
-36. 自定义表单 - 拖拽添加
-37. Vue.nextTick() 与 this.nextTick(callback) 与 this.$nextTick(callback)
-38. echarts双y轴 双x轴设置
-
-## 备忘录
-- vue 禁止滚轮事件 @mousewheel.prevent
-- v-if 表单验证失效 改用 v-show
-- 手机事件处理hammer. js / fastclick
-- 移动设备浏览器为了检查用户是否在做双击，默认click事件会大约延迟300毫秒左右 - 解决 Fastclick
-- 元素柯拖拽属性：draggable="true"；事件：onDragstart，onDragenter，onDragend
-- 对象的循环采用Object.keys() , for in 会循环原型链上的
 ## 数据
 - 如何判断一个变量是否为整数
 ```js
@@ -229,19 +152,6 @@ if flag == 'k' {
 ### 应用打包
 1. appcan
 
-## 优秀插件，库
-- 插件
-1. html2canva
-2. hls.js 视频处理 播放m3u8格式视频流
-- 库
-1. [fontawesome](http://www.fontawesome.com.cn/faicons/)
-2. [lodash](https://lodash.com/docs/4.17.11)
-3. 
-4. [微信jssdk](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html)
-5. [微信转码框架](https://uniapp.dcloud.io/)
-6. rxjs
-7. [wps office](https://view.officeapps.live.com/op/view.aspx)
-
 ## 猜猜坑
 - [a标签ie下载失效](https://www.jianshu.com/p/2af0610d82c7)
 - 火狐浏览器下树组件拖拽失效
@@ -259,69 +169,12 @@ dragstart($event) { // 解决：需要在拖拽时dragstart事件时给event事�
 <my-component @click.native="handleClick">Click Me</my-component>
 <el-input @change.native=""></el-input>
 ```
-
-## 社区博文
-- [sweetalert](https://sweetalert.bootcss.com/docs/#methods)
-- [前端工程师地址](http://gjpykj.ddns.net:8015/#/inputText)
-- [码灵程序论坛文档地址](https://nav.imaring.com/)
-- [49个不知道的css](https://juejin.im/post/5d3eca78e51d4561cb5dde12#heading-44)
-- [各种文档](https://www.kancloud.cn/)
-   - [待整理](https://qq1037305420.github.io/Blog/)(https://qq1037305420.github.io/Blog/nav.03.webpack/#%E4%BE%9D%E8%B5%96%E5%B7%A5%E5%85%B7webpack-cli)
-   - [珠峰1](https://giserman001.github.io/blogs/miniprogram/)
-   - [webpack](https://www.webpackjs.com/concepts/plugins/)
-   - [axios文档](https://www.kancloud.cn/yunye/axios/234845)
-   - [webpack文档](https://www.kancloud.cn/ywfwj2008/webpack-handbook/84591)
-   - [npm文档](https://www.kancloud.cn/shellway/npm-doc/199981)
-   - [d3文档](https://www.kancloud.cn/luponu/d3js-api-zh) [luponu作者其他文档](https://www.kancloud.cn/@luponu?tab=book&page=3)
-
-- [几毛社区](www.baidu.com)
-- [二叉树](https://www.cnblogs.com/wangjiachen666/p/10155507.html)
-- [next中文文档](https://docs.www3.jklib.org/next9/)
-- [阮一峰](http://www.ruanyifeng.com/home.html)
-- [萤石云](http://open.ys7.com/doc/zh/book/4.x/android-sdk.html?q=)
-- [vue各种插件](https://www.toutiao.com/i6718405521088446988/?timestamp=1564450212&app=news_article&group_id=6718405521088446988&req_id=20190730093011010018026159736CF92)
-- css
-   - [张鑫旭](https://www.zhangxinxu.com)
-      - [canvas中文文档](https://www.canvasapi.cn/)
-      - [svg文档](https://www.zhangxinxu.com/GitHub/demo-Snap.svg/demo/basic/)
-   - [css森林](http://blog.cssforest.org/)
-      - [权重比例](http://blog.cssforest.org/2011/05/19/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86CSS%E7%9A%84%E6%9D%83%E9%87%8D.html)
-   - [真不知道的css小点点](https://juejin.im/post/5d3eca78e51d4561cb5dde12)
-- 掘金小册
-   - [books](https://juejin.im/books)
-- 其他
-   - [大前端](http://www.daqianduan.com/)
-   - [腾讯ISUX](https://www.qianduan.net/)
-   - [小胡子](https://www.barretlee.com/)
-   - [canvas动画](http://www.jq22.com/webqd2797)
-   - [资源清单](https://segmentfault.com/a/1190000000416914)
-   - [中文书籍概览](https://github.com/justjavac/free-programming-books-zh_CN)
-   - [面试](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Question)
-   - [算法](https://www.cnblogs.com/rubylouvre) 司徒正美-大名鼎鼎的MVVM框架avalon.js，就是此人出品
-   - [jq框架设计](https://www.cnblogs.com/winter-cn/archive/2013/02/20/2919855.html)
-- 社区
-  - [前端乱炖](http://html-js.com/)
-  - [segmentfault](https://segmentfault.com)
-  - [大漠](https://www.w3cplus.com/)
-   - [svg](https://www.w3cplus.com/svg/building-progress-ring-quickly.html)
-  - [前端网](http://www.w3cfuns.com/)
-  - [简书](https://www.jianshu.com/u/1f3c9af35ae8)
-  - [掘金](https://juejin.im/getting-started)
-  - 知乎
-  - [博客园](https://wz.cnblogs.com/)
-  - [csdn]
-  - 腾讯课堂
-  - 开课吧
-  - 极光学院
-  - 慕课网
-  - [vuepress文章](https://b.himnt.top/blog/base/)
-  - [读书笔记-印象笔记](https://app.yinxiang.com/LoggedOut.action?userId=18145738)
-  - [程序员客栈](https://www.proginn.com/)
-  - [我要自学网](https://www.51zxw.net/)
-
-## 酷炫网站
-- [wa](https://haremu.com/)
-- [aimingoo待处理技术](https://aimingoo.github.io/)
+- vue 禁止滚轮事件 @mousewheel.prevent
+- v-if 表单验证失效 改用 v-show
+- 手机事件处理hammer. js / fastclick
+- 移动设备浏览器为了检查用户是否在做双击，默认click事件会大约延迟300毫秒左右 - 解决 Fastclick
+- 元素柯拖拽属性：draggable="true"；事件：onDragstart，onDragenter，onDragend
+- 对象的循环采用Object.keys() , for in 会循环原型链上的
 
 ## 书籍
 1. 《红宝书》
@@ -349,16 +202,6 @@ dragstart($event) { // 解决：需要在拖拽时dragstart事件时给event事�
 - Openlayers
 - Arcgis
 
-## npm管理
-> 要求：(node版本v8.12.0)
-   1. 项目打包压缩
-   2. npm adduser  注册
-   2. npm login
-   2. npm publish
-- 如何管理npm 包 package.lock.json
-## 收集常用包
-- iLL8 国际化
-- react-redux
 ## 测试
 1. 单元测试
    - 组件测试用例编写

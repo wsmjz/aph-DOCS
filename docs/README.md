@@ -3,7 +3,7 @@ home: true
 # heroImage: /hero.png
 heroText: 苹果家+
 actionText: 一键开工 →
-actionLink: components/jg/button
+actionLink: dev-nav/base
 features:
 - title: 工作概纪
   details: 模块，生成器，脚手架，资源
@@ -17,5 +17,5 @@ features:
   details: 八卦.占卜，奇门遁甲，星象
 - title: 文娱
   details: 历史，音乐，游戏
-footer: 寻志同与道和，期望打造一群朋友的空间，互联网 + 未来
+footer: 互联网 + 未来
 ---

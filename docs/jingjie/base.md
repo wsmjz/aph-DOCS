@@ -246,3 +246,7 @@ Martin Fowler 说过，”持续集成并不能消除 Bug，而是让它们非�
 - Mobx
 - nest.js
 - 桌面应用
+## api
+- 浏览器底层api
+   - requestIdcallbackkk()
+- Element对象

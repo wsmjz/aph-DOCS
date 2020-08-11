@@ -9,8 +9,8 @@ module.exports = {
     repoLabel: 'GitHub',
     nav: [
     {
-      text: '开发规范文档',
-      link: '/dev-word'
+      text: '指南',
+      link: '/dev-nav/base'
     },
     {
       text: 'UI组件生态',
@@ -33,7 +33,10 @@ module.exports = {
       items: [{
         text: '项目',
         items: [{
-          text: 'ping-admin',
+          text: 'ping-vue(简版vue)',
+          link: '/ecology/admin/vue'
+        }, {
+          text: 'ping-react(简版react)',
           link: '/ecology/admin/vue'
         }, {
           text: 'ping-offical-vue(响应式)',
@@ -121,16 +124,7 @@ module.exports = {
     },
     {
       text: '杂记',
-      items: [{
-        text: 'css篇',
-        link: '/zaji/css/base.md'
-      }, {
-      text: 'js篇',
       link: '/zaji/js/base.md'
-      }, {
-        text: '工具篇',
-        link: '/zaji/gj/base.md'
-      }]
     },
     {
       text: '进阶',
@@ -149,9 +143,12 @@ module.exports = {
       link: '/cause/main.md'
     }],
     sidebar: {
-      '/dev-word': [{
-        title: '开发文档规范',
-        sidebarDepth: 0
+      '/dev-nav/': [{
+        title: '指南',
+        sidebarDepth: 2,
+        children: [
+          'base',
+        ]
       }],
       // ================================================核心
       '/Core/Achieve/': [{
@@ -176,7 +173,7 @@ module.exports = {
           'base'
         ]
       }, {
-        title: '提问？？',
+        title: '常见问题',
         collapsable: true,
         children: [
           'vue-review/note'
@@ -317,26 +314,24 @@ module.exports = {
         ]
       }],
       // ================================================杂记
-      '/zaji/css/': [{
-        title: 'css篇',
-        collapsable: true,
-        children: [
-          'base'
-        ]
-      }],
-      '/zaji/js/': [{
+      '/zaji/': [{
         title: '杂记',
-        collapsable: true,
         sidebarDepth: 2,
+        collapsable: false,
         children: [
-          'base'
+          'js/base'
         ]
-      }],
-      '/zaji/gj/': [{
-        title: '工具篇',
+      }, {
+        title: 'css note',
         collapsable: true,
         children: [
-          'base'
+          'css/base'
+        ]
+      }, {
+        title: '工具',
+        collapsable: true,
+        children: [
+          'gj/base'
         ]
       }],
       // =================================================== 进阶

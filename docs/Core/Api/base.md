@@ -1,44 +1,3 @@
-- shouwang.ping@gmail.com
-- Element对象
-- http://shuilizijin.jianyitong.com/minProject/main/index.html
-- https://cn.eslint.org/
-- 我要自学网：https://www.zcool.com.cn/work/ZMjM0NDc0OTI=.html
-
-- https://www.yuque.com/xytech/flutter
-- https://docxtemplater.readthedocs.io/en/latest/
-- https://www.electronjs.org/ 桌面应用
-- https://fivexu.github.io/ui/#/dotRun
-- https://blog.csdn.net/future_todo/article/details/60956942
-- https://www.kancloud.cn/jikeytang/qq/87646
-- 看云 github登录
-- https://legacy.gitbook.com/book/llh911001/mostly-adequate-guide-chinese/discussions?state=open&page=2
-- 有道云
-- https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch1.html#%E4%BB%8B%E7%BB%8D
-- https://www.zcool.com.cn/
-- http://www.ionic.wang/article-index-id-57.html
-- https://legacy.gitbook.com/login?next=%2Fread%2Fbook%2Fli-xinyang%2Ffrontend-notebook%2F
-   - gitbook
-
-
-
-
-
-- https://www.html.cn/
-- https://www.json.cn/
-- https://segmentfault.com/a/1190000014772044
-   - 手机号 hhldm888!
-
-- https://sheetjs.com/
-- https://tongji.baidu.com/research/  百度流量统计
-- https://nwjs.io/
-- https://www.sucaihuo.com/templates 素材火
-- https://msdn.itellyou.cn/   我告诉你
-- https://task.zbj.com/?w=6&k=%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91 猪八戒
-- FunDebug
-   - https://blog.fundebug.com/2017/04/04/nodejs-async-await/
-   - https://blog.fundebug.com/2018/07/24/vs-extensions/
-   - https://blog.fundebug.com/2017/07/17/10-javascript-difficulties/
-   - https://blog.fundebug.com/2018/05/29/30-amazing-vuejs-open-source/
 ## js引擎提供的构造函数
 - new Object()
 - new Array()
@@ -58,17 +17,11 @@
    - pardeInt
 ## 概念解释
 > JavaScript 是一种基于原型的语言 (prototype-based language)，这个和 Java 等基于类的语言不一样。
-- [各类网址导航](https://nav.imaring.com/)
-- [前端一百问](https://juejin.im/post/5d23e750f265da1b855c7bbe)
-- [前端进阶](https://muyiy.cn/question/)
-- [问题博客](https://github.com/yygmind/blog)
-- [资料](https://www.yuque.com/advanced-frontend)
-- [待](https://qq1037305420.github.io/Blog/nav.01.externals/)
+
 - [原型链](https://www.cnblogs.com/dengyao-blogs/p/11481326.html)
    ![](./yxl3.png)
    ![](./yxl2.png)
    ![](./yxl.jpg)
-- [组件库](https://www.toutiao.com/i6718405521088446988/?timestamp=1564450212&app=news_article&group_id=6718405521088446988&req_id=20190730093011010018026159736CF92)
 - js是先进行预编译还是变量提升
 - 虚拟Dom
    1. 易于扩展，高性能，多端运行 toString服务端渲染。。。
@@ -472,6 +425,11 @@ axios.post('url', {
 }).then((response) => {})
 ```
 ## 易忘点
+
+### document对象
+### window对象
+- 屏幕，鼠标
+### 其他
 - e.currentTarget
 - (true && false) 
 ```
@@ -640,7 +598,7 @@ flatData(data) {
    retrun res
 }
 ```
-## 微信
+## 微信相关
 - wx.config()
 - 微信支付
 - 微信分享
