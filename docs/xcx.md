@@ -27,6 +27,11 @@ java或者C#,至少要会写项目
 目前流行的趋势，区块链，AI等
 
 ## lodash
+## jszip
+## qrcode.react
+## react-copy-to-clipboard
+## moment
+## file-saver
 ## immutaion 唯一变量
 ## react-immutable-render-mixin 改变深层对象
 ## rxjs 更复杂的状态管理

@@ -189,7 +189,8 @@ module.exports = {
         title: 'react概记',
         collapsable: true,
         children: [
-          'base'
+          'base',
+          'wenti'
         ]
       }, {
         title: '源码认识',

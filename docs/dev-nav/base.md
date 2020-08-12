@@ -1,4 +1,14 @@
-# 项目结构
+# 介绍
+
+**打造中后台一站式解决方案**
+> [响应式官网.预览](www.baofu.com)<br>
+> [pi-admin.预览](www.baofu.com)
+**工程主应用可集成vue, react, jq项目**
+> vue 子应用 为原生 配合`@pi/v-ui` 实现<br>
+> react 子应用为antd 实现UI层 <br>
+> jq 子应用实现 官网效果
+
+## 项目结构
 ```js
 |-- public
     |   |-- favicon.ico
@@ -7,30 +17,19 @@
     |   |-- logo512.png
     |   |-- manifest.json
     |   |-- robots.txt
-    |-- src
+    |-- src                  // 主应用
         |-- App.css
         |-- App.js
         |-- App.test.js
-        |-- .gitignore  // 忽略文件
-        |-- jest.js  // 测试文件
-        |-- prevest.js // 预设文件
-        |-- .bable.js // es6解析文件
-        |-- pi.config.js // 工程配置文件
+        |-- .gitignore      // 忽略文件
+        |-- jest.js         // 测试文件
+        |-- prevest.js      // 预设文件
+        |-- .bable.js       // es6解析文件
+        |-- pi.config.js    // 工程配置文件
         |-- components
             |-- nav.js
 ```
-
-
-**打造中后台一站式解决方案**
-> [响应式官网.预览](www.baofu.com)<br>
-> [admin-vue.预览](www.baofu.com)
-**此项目为微前端架构，支持vue, react, jq**
-- vue 子应用 为原生 配合appleHome-ui 实现
-- react 子应用为antd 实现UI层
-- jq 子应用实现 官网效果
-
-## 文件结构
-- my.config.js 配置文件
+- ping.config.js 配置文件
 - src 源码目录
 - 常量管理
 - 业务组件
@@ -43,7 +42,7 @@
 ## 配置
 - 全局配置
    > 约定原则
-   > 根目录下 my.config.js 是工程配置，即对开发环境、编译、辅助工具等与项目实现功能或业务无关的配置
+   > 根目录下 ping.config.js 是工程配置，即对开发环境、编译、辅助工具等与项目实现功能或业务无关的配置
    - publicPath
     - entry
     - devServerPort
@@ -56,6 +55,10 @@
 - build:test
 - test
 - prot
+### 环境变量
+- dev
+- prod
+- test
 ### 子应用
 - 创建
 ```js
@@ -69,7 +72,7 @@ npm run app add [name] [port]
 - 抽取出API请求
 - 状态管理vuex
 - mock
-## 自动配置路由
+## 自动路由配置
 - 约定
 ## 常量管理
 - 工程配置常量
@@ -116,6 +119,12 @@ npm run app add [name] [port]
 - 设计规范
 - 文件结构
 ## 流程规范
+- 分支管理
+- 环境管理
+   - 体验区
+   - 稳定区
+   - 灰度
+- CICD
 ## 编码规范
 - Airbnb javascript编码规范 eslint
 - 函数式编程

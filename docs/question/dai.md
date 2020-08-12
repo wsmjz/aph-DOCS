@@ -119,6 +119,7 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 - 脏数据处理 null '' undefind
 - event 事件  vue中$event
 - 表单缓存 回显问题
+- 单点登陆
 ## 业务场景
 - 缓存组件数据
 - 传值拷贝问题

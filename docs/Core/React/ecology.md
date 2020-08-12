@@ -1,9 +1,10 @@
 # react生态
 ## umiJs
 - 解决方案
-## hooks
 ## redux
 - 与react无直接关系的 状态管理器
+- 一个仓库store,包含调度中心(reducer)与state(状态容器)
+- 提供disptch,getState,订阅器
 ## react-redux
 > 说明：与react的整合
 - connect
@@ -13,6 +14,7 @@
 > react 应用在浏览器（dom）上的路由
 ## redux-thunk中间件
 - 解决异步，增强dispatch
+## hooks
 ## redux-saga等中间件
 ## redux-immutable
 - 统一管理：state也处理成immutable数据
