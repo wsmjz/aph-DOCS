@@ -1,7 +1,7 @@
 ## node基础
 - [文档](http://nodejs.cn/)
 ## 特点
-- node是轮训 不会出现高并发
+- node是轮训 不会出现223高并发
 ## 模块
 - command
 - path
