@@ -28,6 +28,7 @@
 npm install mddir -g // 全局安装 mddir
 mddir // 生成当前目录的 markdown
 ```
+- jmeter 测试工具
 # C端产品 B端产品
 - cm 系统
 - bm 系统

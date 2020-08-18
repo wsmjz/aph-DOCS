@@ -1,4 +1,5 @@
 # React
+> 组件，属性，状态，生命周期，传值，Hooks, 顶层Dom方法，事件
 - 特点
    1. 单向数据流
    2. 技能规范要求，限制少，灵活，重原生
@@ -27,6 +28,31 @@
 {props.children}
 {props.left}  
 ```
+#### 重要
+- Context
+   - 共享数据
+- Refs
+
+- React class 组件的详细 API
+> React.Component<br>
+> 组件更新生命周期：static getDerivedStateFromProps() => shouldComponentUpdate() => render() => getSnapshotBeforeUpdate() => componentDidUpdate()
+   - constructor()
+   - static getDerivedStateFromProps()
+   - render()
+   - componentDidMount()
+   - componentWillUnmount() // 卸载
+   - static getDerivedStateFromError() // 错误处理
+   - componentDidCatch()
+   - setState()
+   - forceUpdate()
+   - class 属性
+      - defaultProps
+      - displayName
+   - 实例属性
+      - props
+      - state
+
+
 
 ## 讨论
 - 组件可以接受任意 props，包括基本数据类型，React 元素以及函数

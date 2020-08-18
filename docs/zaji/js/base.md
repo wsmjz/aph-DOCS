@@ -1,5 +1,16 @@
 # 杂记
 
+## 异常处理
+- 1
+```js
+Uncaught (in promise) TypeError: Failed to fetch
+```
+- 2
+```js
+net::ERR_NAME_NOT_RESOLVED
+```
+## 部署
+- package-lock.json 安装依赖部署项目
 ## 数据
 - 如何判断一个变量是否为整数
 ```js
@@ -8,6 +19,7 @@
 - 0.1 + 0.2 == 0.3000000
 
 ## 其他
+- 并行编译
 ### 浅拷贝与深拷贝
 - 数组的浅拷贝：数组里的引用类型都是浅拷贝的
    ```js

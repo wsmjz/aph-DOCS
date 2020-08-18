@@ -1,5 +1,18 @@
-## node基础
-- [文档](http://nodejs.cn/)
+## npm 
+
+## node核心模块
+> [文档](http://nodejs.cn/)
+- 事件队列
+- 全局对象
+- http和tcp服务
+
+## 框架
+- express
+- koa
+
+## 应用
+- 文件上传
+
 ## 特点
 - node是轮训 不会出现高并发
 ## 模块

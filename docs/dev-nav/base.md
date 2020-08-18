@@ -1,8 +1,27 @@
 # 介绍
-
-**打造中后台一站式解决方案**
+**Pi Home 是一个完整的一站式解决方案(开发系统) 提供：**
 > [响应式官网.预览](www.baofu.com)<br>
-> [pi-admin.预览](www.baofu.com)
+> [pi-admin.预览](www.baofu.com)<br>
+> 这是一个由兴趣而驱动的项目，仅代表个人<br>
+   - 通过 `@pi/cli` 实现的交互式的项目脚手架。
+   - `@pi/ping` 一站式自动化解决方案
+      - 配置文件 `ping.config.js（可选，）`
+      - 代码生成
+         - 模拟数据Mock
+         - 配置vuex,Store
+      - 自动路由配置
+   - `@pi/ui-vue` 原装vue组件库
+   - `@pi/ui-react` 原装react组件库
+   - 自动配置安装官方webpack同用法（考虑是否开发`原装webpack`）
+   - `@pi/schame` 全局校验
+   - 一套丰富的常用插件集合
+   - 一个运行时依赖 `(@pi/cli-service)`，该依赖：
+      - 可升级
+      - 基于 webpack 构建，并带有合理的默认配置
+      - 可以通过项目内的配置文件进行配置；
+      - 可以通过插件进行扩展。
+
+
 **工程主应用可集成vue, react, jq项目**
 > vue 子应用 为原生 配合`@pi/v-ui` 实现<br>
 > react 子应用为antd 实现UI层 <br>
