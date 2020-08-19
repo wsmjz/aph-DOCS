@@ -128,7 +128,16 @@ module.exports = {
     },
     {
       text: '进阶',
-      link: '/jingjie/base'
+      items: [{
+        text: 'node',
+        link: '/jingjie/base'
+      }, {
+        text: 'Linux',
+        link: ''
+      }, {
+        text: 'python',
+        link: ''
+      }]
     },
     {
       text: '第三方库',
