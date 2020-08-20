@@ -1,15 +1,16 @@
 # React
-> 组件，属性，状态，生命周期，传值，Hooks, 顶层Dom方法，事件
+> 组件，属性，状态，生命周期，路由，Store，Hooks, 顶层Dom方法，事件，中间件<br>
+> react和vue 解决的都是视图层的问题，也就是封装了dom操作的api, 数据绑定， 用虚拟dom比对做了Dom更新的性能优化，之后浏览器如果直接解决了这个问题，也就不需要这框架了
 - 特点
    1. 单向数据流
    2. 技能规范要求，限制少，灵活，重原生
    - hooks 可以跨度传值 相当于 provide/inject
-## 基础
-### 属性
-- 类型校验
-### 状态
-- 状态对象不是覆盖 合并 {...state, ...privi}
-### 组件
+## 属性
+- 类型校验`react-type`
+## 状态
+- 状态提升，共享数据，每个组件内部使用的state，改为props传入
+- setState方法实现 =》状态对象不是覆盖 合并 {...state, ...privi}
+## 组件
 - 函数组件
    - 实例难以销毁，影响性能
    - 自身有状态
@@ -29,7 +30,7 @@
 {props.children}
 {props.left}  
 ```
-#### 重要
+## 重要掌握
 - Context
    - 共享数据
 - Refs
@@ -187,9 +188,10 @@ function FriendListItem(props) {
    - 受控组件
       - 渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。被 React 以这种方式控制取值的表单输入元素就叫做“受控组件”。
 
-## 子组件向父组件通信
+## 通信
    1. 回调函数
-   2. redux
+   2. redux-react
+      - Provid
 
 ## setState()
 数据更新是为同步，视图渲染为异步
@@ -197,7 +199,9 @@ function FriendListItem(props) {
 ## 性能优化
 - React.Fragment 空标签 <>: 语法糖
 
-## this绑定
+
+## 注意项
+- this绑定
 ```js
 // 1.
 constructor(props) {
@@ -209,7 +213,6 @@ constructor(props) {
 // 2. 箭头函数保证this
 <a onClick={() => {this.handleClick()}}></a>
 ```
-## 注意项
 - 方法写做箭头函数，保证this为当前类的实例
 - super(props) 把参数传递给父类
 - this.props 和 this.state 是 React 本身设置的，且都拥有特殊的含义，但是其实你可以向 class 中随意添加不参与数据流（比如计时器 ID）的额外字段。

@@ -56,6 +56,7 @@ store.dispatch = () => {
    > 是否批次 `变量isBatchingUpdates = false` 控制同步更新还是异步更新，batchedUpdates函数会修改`isBatchingUpdates = true`
 ## 其他
 - PureComponent组件实现
+- 为什么子组件的props就能拿到父组件传递的属性呢
 ## 与vue的性能对比优化
 - react改进了fibe, 分片渲染Dom
 - vue使用Proxy
