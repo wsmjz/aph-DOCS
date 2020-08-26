@@ -2,7 +2,8 @@
 
 ## 区别
 > 1. 设计思想不同：vue追求的是开发的简单，而react更在乎方式是否正确,合理<br>
-> 2. 对数据的感知不同：vue(Know)双向this.a = 0, react(Do not Know)单向this.setState({a: 0})
+> 2. 对数据的感知不同：vue(Know)双向this.a = 0, react(Do not Know)单向this.setState({a: 0})<br>
+> react 与 vue 都是一种解决方案而已，各有所长，不存在于好坏，**提升核心竞争力**
 - react是单向数据流，vue双向数据流v-module（props,$emit的语法糖，其实也是子组件@emit触发父组件的方法，react回调函数向父组件传值）
 - react与vue中的computed，Watcher
    - react的数据是不是可变的；
@@ -22,7 +23,7 @@ class App {
     }
 }
 ```
-- vue是**声明式的写法**，通过传入各种options，api和参数都很多。所以react结合typescript更容易一起写，vue稍微复杂;vue结合vue-class-component也可以实现类式的写法，但是还是需要通过decorator来添加声明，并不纯粹
+- vue是**声明式的写法**，通过传入各种options，api和参数都很多。所以`react结合typescript更容易一起写`，vue稍微复杂;vue结合vue-class-component也可以实现类式的写法，但是还是需要通过decorator来添加声明，并不纯粹
 ```js
 new Vue({
     template,
@@ -33,6 +34,32 @@ new Vue({
 })
 ```
 - react可以通过高阶组件（Higher Order Components--HOC）来扩展，而**vue需要通过mixins**来扩展；Vue也不是不能实现高阶组件，只是特别麻烦，因为Vue对与组件的option做了各种处理，想实现高阶组件就要知道每一个option是怎么处理的，然后正确的设置。[详情](http://hcysun.me/2018/01/05/%E6%8E%A2%E7%B4%A2Vue%E9%AB%98%E9%98%B6%E7%BB%84%E4%BB%B6/)
+- react中相对于vue的计算属性可用`get拦截`实现, (没有缓存特性，可借助第三方插件`memoize-one`来实现)
+```js
+state = {
+    name: '小怂',
+    age: 18
+  }
+  get computed() {
+    let { name, age } = this.state
+    console.log('我被调用了', new Date())
+    return (
+      <h1>
+        {name}+{age}
+      </h1>
+    )
+  }
+```
+- vue核心：响应式数据系统，组件系统
+   - 实例中的data与其渲染的DOM元素的内容保持一致，通过设置属性访问器实现
+- react没有vue中的watch；通常情况下，React 的状态都是手动 setState 变化的，React 不监听数据变化；；在实践中可以尝试在 state 里放一个定义了 getter 和 setter 的对象，在 setter 里来发这个请求，响应后再 setState 回去。。。`watch-props 库，提供类似于 vue watch 这样的能力`(做业务-监听[弹框](https://www.jb51.net/article/147331.htm)，都是通过生命周期监听 props变化 ，这样bug 会很多,容易导致死循环等问题，`watch-props`目的就是减少使用一些 react 生命周期。)
+```js
+componentDidUpdate(prevProps, prevState) {
+    if(prevState.name !== this.state.name) {
+
+    }
+}
+```
 
 ## 中间件
 > redux默认只处理同步，应用中间件处理异步=》就是对action,dispatch之前，之后做一些事情<br>

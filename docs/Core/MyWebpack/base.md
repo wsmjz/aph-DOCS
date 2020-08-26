@@ -1,4 +1,9 @@
 # webpack
+## 常见问题
+- 优化打包速度
+- loader实现
+- plugin实现
+## 8888888
 - npx webpack `就是寻找(运行)node_modules/.bin/webpack.cmd 脚本文件`
 - npm run build 同上 就是寻找node_modules/.bin目录
 - ast语法分析

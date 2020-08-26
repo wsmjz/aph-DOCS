@@ -13,6 +13,13 @@
 ## react-redux
 > 说明：与react的整合
 - connect
+> 返回 一个类组件，可继续嵌套，loadOrerror组件
+```js
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(LoadOrError(SettlementStatement));
+```
 - actions
 - reduxer
 ## redux-thunk

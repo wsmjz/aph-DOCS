@@ -61,6 +61,7 @@
 - 想要在组件间复用非 UI 的功能，我们建议将其提取为一个单独的 JavaScript 模块，如函数、对象或者类。组件可以直接引入（import）而无需通过 extend 继承它们
 - js es6 中 class 的方法默认不会绑定 this 所以需要手动call 绑定this
 - 这其实与 JavaScript 函数工作原理有关。通常情况下，如果你没有在方法后面添加 ()，例如 onClick={this.handleClick}，你应该为这个方法绑定 this
+- react的上层开发者要更多一些
 ## sdf
 - 满足域内域外 的研发发布体系
 - 可配置表单
