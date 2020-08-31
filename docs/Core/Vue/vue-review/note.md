@@ -215,7 +215,10 @@ export function nextTick (cb?: Function, ctx?: Object) {
 
 ### 理解:   
 
-- 默认`computed`也是一个`watcher`是具备缓存的，只要当依赖的属性发生变化时才会更新视图
+- 默认`computed`也是一个`watcher`是具备缓存的，只要当依赖的属性发生变化时才会更新视图，依赖的数据没用变化时，直接返回上一次的结果
+- 与methods中的不同，只要视图重新发生渲染就会再次执行
+- 是如何对计算结果进行缓存的，有什么注意事项
+
 
 ### 原理:
 
@@ -1544,7 +1547,9 @@ export default {
 
 ![](https://vuex.vuejs.org/vuex.png)
 
-
+## 35.`v-for` 是根据什么顺序遍历的
+## 其他
+- vue的整体架构，用到了那些设计模式，解决了什么问题 
 
 ### 作业:
 
