@@ -57,6 +57,9 @@ module.exports = {
           text: '基础资源ping-base-lib',
           link: '/ecology/dev/devtools'
         }, {
+          text: 'pi(核心，自动化配置)',
+          link: '/ecology/cli/cli'
+        }, {
           text: '脚手架ping-cli',
           link: '/ecology/cli/cli'
         }, {

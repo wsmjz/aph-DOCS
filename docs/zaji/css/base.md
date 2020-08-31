@@ -19,6 +19,7 @@
 - fixed // z-index 有效 脱离文档流
 ```
 - BEM CEM css规范
+- 如何实现0.5px的线
 
 1. calc()计算属性
 2. 3d 属性

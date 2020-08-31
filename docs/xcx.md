@@ -25,21 +25,29 @@ java或者C#,至少要会写项目
 
 八:前瞻性学习
 目前流行的趋势，区块链，AI等
-
-## lodash
-## jszip
-## qrcode.react
-## react-copy-to-clipboard
-## moment
-## file-saver
-## immutaion 唯一变量
-## react-immutable-render-mixin 改变深层对象
+## 包列表
+   - better-npm-run
+   - yargs(解析node参数)
+   - lodash
+   - jszip
+   - 二维码相关
+      - qrcode
+      - qrcode.react
+   - react-copy-to-clipboard
+   - moment
+   - file-saver
+   - immutaion 唯一变量
+   - react-immutable-render-mixin 改变深层对象
 ## rxjs 更复杂的状态管理
 ## socket.io
 ## 转化PDFhtml2canva
 ## hls.js 视频处理 播放m3u8格式视频流
 ## fmlls 音频裁剪
 ## iLL8 国际化
+## Base64
+- js-base64
+## 图片裁剪
+- react-image-crop
 ## npm管理
 > 要求：(node版本v8.12.0)
    1. 项目打包压缩
@@ -48,6 +56,7 @@ java或者C#,至少要会写项目
    2. npm publish
 - 如何管理npm 包 package.lock.json
 ## vuetify.js
+- [文档](https://vuetifyjs.com/zh-Hans/jobs/for-vue/)
 - 移动端：有一定开发能力的团队，应自己开发一套，匹配自身需求，维护起来也更容易
 ## slatejs
 - 可定制富文本编辑框架

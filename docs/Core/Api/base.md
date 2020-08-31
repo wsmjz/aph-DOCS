@@ -1,20 +1,126 @@
-## js引擎提供的构造函数
-- new Object()
-- new Array()
+## 引擎内置对象（原生对象，构造函数）
+> 其实除了Math及全局对象，其余的为构造函数, [参见](https://www.cnblogs.com/deepalley/p/10544311.html)
+`Object()`, `RegExp`, `Date` ,`Array()`, `Function()`, `String()`, `Blooen()`
+- new `Error()`
+- new `Xml()`
+- new `Image()`
+- new `Proxy()`
+   - vue3的性能提升
+- new `FileReader()`
+- new `FormData()`
+- new `URLSearchParams()`
+- new `Blob()`
+   - base64 比二进制大1/4
+- new Array
+   - 属性
+      - constructor
+      - prototype
+      - index
+      - length
+      - input
+   - 方法
+      - concat
+      - sort
+- new Date()
+   - 属性
+      - constructor
+      - prototype
+   - 方法
+      - getDay()
+      - getYear()
+      - getFullYear()
 - new Function()
-- new String()
-- new Blooen()
-- new Error()
-- new Math()
-- new Xml()
-- new Image()
-- new Proxy()
-- new FileReader()
-- new FormData()
-- new URLSearchParams()
+   - 属性
+      - prototype
+      - arguments
+      - arity
+      - caller
+   - 方法
+      - toString
+- Math 没有构造函数
+   - 属性
+      - constructor
+      - prototype
+   - 方法
+      - Math.abs()
+      - Math.floor()
+      - valueOf()
+- arguments
+- Json
+- new Promise()
+### js全局对象
+> 全局属性和函数可用于所有内建的 JavaScript 对象。<br>
+> 全局对象是预定义的对象，作为 JavaScript 的全局函数和全局属性的占位符。通过使用全局对象，可以访问所有其他所有预定义的对象、函数和属性。全局对象不是任何对象的属性，所以它没有名称。<br>
+> 全局对象只是一个对象，而不是类。既没有构造函数，也无法实例化一个新的全局对象。<br>
+
+- 值属性, 顶层属性（全局属性）
+> 这些全局属性返回一个简单值，这些值没有自己的属性和方法。
+   - Infinity
+   - NaN
+   - undefined
+   - globalThis
+- 函数属性, 顶层函数（全局函数）
+> 全局函数可以直接调用，不需要在调用时指定所属对象，执行结束后会将结果直接返回给调用者。
+   - parseInt()
+   - decodeURI()
+   - encodeURI()
+   - eval()
+   - String()
+   - isNaN()
+   - getClass()
+### 错误对象
+- Error
+- ReferenceError
+- AggregateError
+### 数字和日期
+- BigInt
+- Date
+- Math
+- Number
+### 使用键的集合对象
+- Map
+- Set
+- WeakMap
+- WeakSet
+### 结构化数据
+- ArrayBuffer
+- SharedArrayBuffer
+- Atomics
+- DataView
+- JSON（JavaScript Object Notation）
+   - 不是js的子集
+### 控制抽象对象
+- Promise
+- Generator
+- AsyncFunction
+- GeneratorFunction
+### 反射
+- Reflect
+- Proxy
+### 国际化
+- Intl
+
+### 其他
+- arguments
+
 ## 常用api
 ### Math
    - pardeInt
+### events 事件对象
+- vue($events)
+- e.pageX()
+### arguments
+- 伪数组，不是一个数组，但是有length，index方法
+- 没有push，pop
+```js
+typeof arguments // 'object'
+// 转化为真数组
+var args = Array.prototype.slice.call(arguments);
+```
+## Browser对象
+> 不需要定义，创建
+- 全局对象，window
+
 ## 概念解释
 > JavaScript 是一种基于原型的语言 (prototype-based language)，这个和 Java 等基于类的语言不一样。
 
@@ -76,6 +182,11 @@ let obj = {
 - str.startsWith('v-')
 ```js
 "v-model".startsWith('v-') // true
+//
+var str="我不是一个真的对象";
+typeof str // String
+var str=new String("aaa")；
+typeof("str")==Object;//true
 ```
 ## 对象
 一切皆对象(普通对象，实例对象，原型对象，普通函数，构造函数)

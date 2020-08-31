@@ -3,6 +3,7 @@
 - 期望越大，失望越大，适当期望
 - 井井有条的管理，可授权
 - 目标，努力，坚持，乐观
+- 自驱力
 - 自律 坚持 写日记 反思不足
 **成长**
 - 2016
@@ -133,6 +134,8 @@
 - 医疗险
 - 重疾险
    - 注意事项
+   - 选择理由
+   > 60周岁前，多交多赔(25*(0.45+0.15)---30*0.3)；60周岁后, 少交多赔(25 *0.45---30*0.3)
 - 寿险
 - 年金险
    1. 确定性收益 ：年金险（利率相对高） 锁定利率 4.0125 长期
@@ -146,6 +149,8 @@
 ### 黄金
 ### 股票
 - K线图 阳性，阴性-
+- 红肥绿瘦
+- 早上看10点半，下午2点半，早上涨-减仓，跌-加仓；下午涨-减仓，跌-次日看买
 ### 房产
 
 ## 健康管理师
@@ -168,6 +173,11 @@
 - 平台不对，方向不对，努力白费
 - 先装大核桃，再装芝麻绿豆，先做重要的事
 - 罗列你需要成功的理由是什么，你的梦想是什么
+- 一定要发展副业，主业是为了求生存， 副业一定是要谋发展（摆地摊等靠时间的消耗性副业无意义，要去产生突破性的变化）
+- 教育要以形触情，加热易拉罐放入冰水中 比喻 人体过热后吃冷饮
+- 成大事者，学历不是核心，而是一种认识，对事物的认知，与内驱力
+- 云淡风轻，深谋远虑
+- 我们懂得了很多道理 生活却是靠的修为
 ## 社区博文
 - [sweetalert](https://sweetalert.bootcss.com/docs/#methods)
 - [前端工程师地址](http://gjpykj.ddns.net:8015/#/inputText)
@@ -175,7 +185,8 @@
 - [49个不知道的css](https://juejin.im/post/5d3eca78e51d4561cb5dde12#heading-44)
 - [各种文档](https://www.kancloud.cn/)
    - [Happy Coding待整理](https://qq1037305420.github.io/Blog/)(https://qq1037305420.github.io/Blog/nav.03.webpack/#%E4%BE%9D%E8%B5%96%E5%B7%A5%E5%85%B7webpack-cli)
-   - [珠峰1](https://giserman001.github.io/blogs/miniprogram/)
+   - [清风拂林](https://giserman001.github.io/blogs/miniprogram/)
+   - [辣椒酱](https://removeif.github.io/)
    - [webpack](https://www.webpackjs.com/concepts/plugins/)
    - [axios文档](https://www.kancloud.cn/yunye/axios/234845)
    - [webpack文档](https://www.kancloud.cn/ywfwj2008/webpack-handbook/84591)
@@ -251,12 +262,12 @@
 - [码农网](https://www.codercto.com/)
 - [问题博客](https://github.com/yygmind/blog)
 - [醉牛前端](http://f2er.club/)
-- [六爻系统](http://www.fullstackjavascript.cn:3000/liuyao)
+- [六爻系统](http://www.fullstackjavascript.cn:3000)
 
 - [力扣](https://leetcode-cn.com/problemset/all/)
 - [新德里](http://newgateway.gitee.io/xdh-map/animate/track.html#%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95)
 - [可视化表单](http://newgateway.gitee.io/xdh-form-builder/#/)
-- [react后台系统](https://nlrx-wjc.github.io/react-antd-admin-template/#/dashboard)
+- [react后台系统](https://nlrx.gitee.io/react-antd-admin-template)
 - [vue百度地图](https://dafrok.github.io/vue-baidu-map/#/)
 - [canvas中文网](https://www.canvasapi.cn/CanvasRenderingContext2D/createPattern)
 - [食草](https://haveyuan.github.io/)

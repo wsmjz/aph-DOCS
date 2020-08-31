@@ -1,4 +1,4 @@
-# 杂记
+# 文章与备忘录
 
 ## 异常处理
 - 1
@@ -8,6 +8,10 @@ Uncaught (in promise) TypeError: Failed to fetch
 - 2
 ```js
 net::ERR_NAME_NOT_RESOLVED
+```
+- 3
+```js
+Uncaught (in promise) SyntaxError: Unexpected end of JSON input
 ```
 ## 部署
 - package-lock.json 安装依赖部署项目

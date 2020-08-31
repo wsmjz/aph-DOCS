@@ -38,6 +38,7 @@
    - 抛出一个疑问，微前端究竟是为了"微"还是兼容不同框架？这两者有本质不同，如果只是为了"微"，那么各种隔离都不需要做，因为本质上就是把大项目拆分，本身他们之间就不会有任何影响。而只是兼容不同框架，那么这个意义不大，谁会在一个公司为了用不同的框架从而维护好几套 ui 框架 [看看你] 不觉得累么。除非就是拿微前端来填坑，把旧的东西很难重构的页面杂糅在一起，而这个本质上已经偏离了真正微前端的意义了
    - 微组件挺好，我就一个 WebCompoent，你不用管我用 R/V/A/j，反正给你的就是一个 js 和一个 tag，你自己调用就行了。所以一个页面充满着 R/V/A/j 问题也不大。就和 Docker 一样，data 进来了，我给你 trans 出 你想要的 data 就行啦，至于怎么实现的，用什么技术实现的，对不起，这不重要，我也不想关心，调用就完了
    - 就是主应用加载子应用js文件
+## 模版引擎实现原理
 ## web安全
 ## 网络协议
 - [文章](https://www.cnblogs.com/Java3y/p/8444033.html)
@@ -91,6 +92,18 @@ dns解析 =》 连接tcp协议（3次握手） =》 浏览器请求服务器返�
 - 函数式编程
    1. 柯里化(curry函数应用参数列表的顺序是从左到最右)
    2. 偏函数(partial函数应用参数列表的顺序是从左到最右)
+### 组件库
+- http://gitlab.shishike.com/front_end/kryfe-components
+- http://gitlab.shishike.com/front_end/kryfe-component-ts
+- 通用库：kryfe-lib
+### 构建工具(cli)
+-  http://gitlab.shishike.com/front_end/kryfe-tools
+### 代码检查工具
+- http://gitlab.shishike.com/front_end/stylelint-config-kryfe
+- http://gitlab.shishike.com/front_end/eslint-config-kryfe
+- http://gitlab.shishike.com/front_end/kryfe-style-mobile
+### docker
+- http://gitlab.shishike.com/front_end/kryfe-nginx-docker
 ## 浏览器
 ### 缓存优化
 > 304
@@ -112,11 +125,31 @@ dns解析 =》 连接tcp协议（3次握手） =》 浏览器请求服务器返�
 - 流程
 - 特点
    - 尽早交付，从用户反馈，迭代更新
+## 前端SDK
+> 完善的SDK叫做框架-[文章](https://www.zhihu.com/question/20225153)
+- 优惠券计算SDK
 ## 前端监控
-- 更好服务产品
+> 更好服务产品
+- 性能
+   - DNS查询时间
+   - TCP链接时间
+   - request请求时间
+   - 白屏时间
+   - 首屏时间
+   - 可交互时间
+   - 总下载时间
+   - dom下载时间
+- 错误
+> 更好地及时发现，定位错误
+   - js错误
+   - 用户信息
+   - api请求地址
+   - 分辨率
+   - json错误
+- 用户行为
 ## 爬虫
 
-## 工程化.运维
+## 工程化.运维 (jenkins配置)
 - 配置短命令
    ```
    vi ~/gitconfig

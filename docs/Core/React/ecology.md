@@ -20,6 +20,16 @@ export default connect(
   mapDispatchToProps,
 )(LoadOrError(SettlementStatement));
 ```
+- 原理实现
+```js
+export function connect(mapStates, mapActions) {
+    return function(components) {
+        return (
+            <div>返回虚拟Dom树</div>
+        )
+    }
+}
+```
 - actions
 - reduxer
 ## redux-thunk

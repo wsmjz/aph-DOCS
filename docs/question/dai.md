@@ -18,6 +18,7 @@
 - 图片裁剪，封装，Bloob
 - map 实现
 - npm 包压缩 上传
+- 包上传cdn
 ```js
 npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除项目中的其他文件  或者新建一个项目只包含package和dist
 ```
@@ -74,6 +75,10 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 37. Vue.nextTick() 与 this.nextTick(callback) 与 this.$nextTick(callback)
 38. echarts双y轴 双x轴设置
 
+## 文章博客
+### umi原理探究
+- 链接，致谢
+
 ## 运维
 - nglix
 - docker
@@ -82,6 +87,7 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 - Xshell
 
 ## 必须基石，竞争力
+- 学会去从源码中领悟编程思想
 - Promis, async, await原理
    - 30%
 - Vue 源码
@@ -111,6 +117,15 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 - 虚拟dom跨平台应用 转化
 - B端产品 C端产品 小程序为C端 bs架构 cs架构
 - 调用设备原生接口 （日历，蓝牙）
+## 专题
+- 瀑布流
+- 轮播马赛克
+- WebView
+- uni-app
+- 购物车，支付流程
+- umi
+- 小程序
+- 硬件接口（定制化手机日历通知）
 ## 大类问题
 - tabs 返回当前列表问题 分页返回当前页 搜索返回当前条件页
    - 每个table 一个组件

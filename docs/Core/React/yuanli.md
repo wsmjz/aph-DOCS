@@ -35,4 +35,3 @@
 ## redux
 - 40：10
 - combineReducers
-
