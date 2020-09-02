@@ -106,9 +106,6 @@
 ## 常用api
 ### Math
    - pardeInt
-### events 事件对象
-- vue($events)
-- e.pageX()
 ### arguments
 - 伪数组，不是一个数组，但是有length，index方法
 - 没有push，pop
@@ -117,7 +114,15 @@ typeof arguments // 'object'
 // 转化为真数组
 var args = Array.prototype.slice.call(arguments);
 ```
-## Browser对象
+### events 事件对象
+- vue($events)
+- 鼠标
+   - e.pageX()
+   - clientX
+### document对象
+### window对象
+- 屏幕，鼠标
+### Browser对象
 > 不需要定义，创建
 - 全局对象，window
 
@@ -196,11 +201,18 @@ typeof("str")==Object;//true
 - Object.key(obj) // 把对象的key转化为一个数组
 ### 对象`自带方法属性`（原型链中）
 - toString
-- dinfinProperty
-- Objesc.assign() - 浅拷贝
+
 ### 方法
-- Object.key(obj)
+- Object.create()
+- Object.defineProperty()
+- Object.freeze()
+- Object.assign()
+   - 浅拷贝
+- Object.keys(obj)
 > 相对于for in 不会遍历原型链中的属性
+- Object.is()
+- Object.values()
+
 ### 创建对象
 - 直接字面量 let a = {}
 - new 关键字 let a = new Object()
@@ -221,6 +233,14 @@ typeof("str")==Object;//true
 - 实例化对象 / vue实例 / new一个实例 /可见渲染元素都是一个实例
 - 创建过程
 - 实例化过程.挂载理解
+### 对象操作
+- 合并两个对象
+   - 扩展运算
+   - 其他
+- 多继承
+```js
+// 一个类同时继承两个类
+```
 
 ## 数组 `33个`  
 > 是(`true`)否(`false`)改变原数组<br>
@@ -267,6 +287,26 @@ typeof("str")==Object;//true
 - reduceRight()
 9. 扩展方法
 - from()，of()，prototype.copyWithin()，includes()
+### 数组操作
+- 交集，并集
+```js
+var a = [1,2,3,4,5]
+var b = [2,4,6,8,10]
+//交集
+var c = a.filter(function(v){ return b.indexOf(v) > -1 })
+//差集
+var d = a.filter(function(v){ return b.indexOf(v) == -1 })
+//补集
+var e = a.filter(function(v){ return !(b.indexOf(v) > -1) })
+ .concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}))
+//并集
+var f = a.concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}));
+```
+   - 使用 ES6 语法实现 new Set(a)
+- 在数组头部添加元素
+   - unshift
+   - splice()
+
 ## 函数
 - 写法
 ```js
@@ -325,9 +365,7 @@ function aa(cb) {
   cb(arr)
 }
 ```
-## 鼠标相关
-- 事件 event
-   - e.clientX
+
 ## 正则匹配
 - 正则匹配替换
 - ^ 匹配开始
@@ -537,9 +575,6 @@ axios.post('url', {
 ```
 ## 易忘点
 
-### document对象
-### window对象
-- 屏幕，鼠标
 ### 其他
 - e.currentTarget
 - (true && false) 
@@ -608,34 +643,6 @@ class Foo {
 ### promise
 - 中断一个promise 返回一个 `new Promise()` 既不成功，也不失败
 <!-- - [中断axios请求](https://blog.csdn.net/itKingOne/article/details/83651004) -->
-
-## 数组操作
-- 交集，并集
-```js
-var a = [1,2,3,4,5]
-var b = [2,4,6,8,10]
-//交集
-var c = a.filter(function(v){ return b.indexOf(v) > -1 })
-//差集
-var d = a.filter(function(v){ return b.indexOf(v) == -1 })
-//补集
-var e = a.filter(function(v){ return !(b.indexOf(v) > -1) })
- .concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}))
-//并集
-var f = a.concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}));
-```
-   - 使用 ES6 语法实现 new Set(a)
-- 在数组头部添加元素
-   - unshift
-   - splice()
-## 对象操作
-- 合并两个对象
-   - 扩展运算
-   - 其他
-- 多继承
-```js
-// 一个类同时继承两个类
-```
 
 ## 数据处理
 - 理解数据结构

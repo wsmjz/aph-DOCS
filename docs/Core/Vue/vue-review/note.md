@@ -1543,6 +1543,7 @@ export default {
 ## 34.简述`Vuex`工作原理
 
 ![](https://vuex.vuejs.org/vuex.png)
+## 35.一个vue文件返回了什么？
 
 
 
