@@ -75,10 +75,10 @@ module.exports = {
           text: '路由',
           link: '/ecology/schema'
         }, {
-          text: '图表',
+          text: '日期',
           link: '/ecology/schema'
         }, {
-          text: '日期',
+          text: '图表',
           link: '/ecology/schema'
         }, {
           text: '地图',
