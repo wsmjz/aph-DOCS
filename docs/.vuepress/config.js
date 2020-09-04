@@ -132,6 +132,12 @@ module.exports = {
     {
       text: '进阶',
       items: [{
+        text: '数据结构',
+        link: '/jingjie/sjjg'
+      }, {
+        text: '算法',
+        link: '/jingjie/suanfa/base'
+      }, {
         text: 'node',
         link: '/jingjie/base'
       }, {
@@ -348,6 +354,14 @@ module.exports = {
         ]
       }],
       // =================================================== 进阶
+      '/jingjie/suanfa/': [{
+        title: '算法',
+        collapsable: true,
+        sidebarDepth: 1,
+        children: [
+          'base'
+        ]
+      }],
       '/jingjie/': [{
         title: '设计模式',
         collapsable: true,
