@@ -1,5 +1,6 @@
 ## 工作记
 **目标，自律，自身，乐观**
+- 努力学习，找到一种状态，让优秀成为习惯
 - 期望越大，失望越大，适当期望
 - 井井有条的管理，可授权
 - 目标，努力，坚持，乐观
@@ -178,6 +179,9 @@
 - 成大事者，学历不是核心，而是一种认识，对事物的认知，与内驱力
 - 云淡风轻，深谋远虑
 - 我们懂得了很多道理 生活却是靠的修为
+- 被低俗的娱乐浸泡，会麻醉思想
+- 以入世的态度做事，以出世的态度做人
+- 让学习快乐，记录，让每一件事都有迹可循，让每一件事都分门别类，归属，档案，按部就班，系统授权；建立体系，规则，法则，回归可测，回首可望
 ## 社区博文
 - [sweetalert](https://sweetalert.bootcss.com/docs/#methods)
 - [前端工程师地址](http://gjpykj.ddns.net:8015/#/inputText)
@@ -186,6 +190,8 @@
 - [各种文档](https://www.kancloud.cn/)
    - [Happy Coding待整理](https://qq1037305420.github.io/Blog/)(https://qq1037305420.github.io/Blog/nav.03.webpack/#%E4%BE%9D%E8%B5%96%E5%B7%A5%E5%85%B7webpack-cli)
    - [清风拂林](https://giserman001.github.io/blogs/miniprogram/)
+   - [静水深流](https://slbyml.github.io/links/)
+      - 算法
    - [辣椒酱](https://removeif.github.io/)
    - [webpack](https://www.webpackjs.com/concepts/plugins/)
    - [axios文档](https://www.kancloud.cn/yunye/axios/234845)

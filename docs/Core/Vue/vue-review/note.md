@@ -346,6 +346,7 @@ function _traverse (val: any, seen: SimpleSet) {
 - `mounted` 实例已经挂载完成，可以进行一些DOM操作
 - `beforeUpdate` 可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。
 - `updated` 可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态，因为这可能会导致更新无限循环。 该钩子在服务器端渲染期间不被调用。
+   - 鼠标失焦，重命名文件树name (更改了dom)
 - `destroyed` 可以执行一些优化操作,清空定时器，解除绑定事件
 
 ![](note.assets/lifecycle.png)
@@ -1546,8 +1547,9 @@ export default {
 ## 34.简述`Vuex`工作原理
 
 ![](https://vuex.vuejs.org/vuex.png)
+## 35.一个vue文件返回了什么？
 
-## 35.`v-for` 是根据什么顺序遍历的
+## 36.`v-for` 是根据什么顺序遍历的
 ## 其他
 - vue的整体架构，用到了那些设计模式，解决了什么问题 
 

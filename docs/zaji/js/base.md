@@ -1,6 +1,17 @@
 # 文章与备忘录
 
 ## 异常处理
+> [廖雪峰官网](https://www.liaoxuefeng.com/wiki/1022910821149312/1120870328169696)
+```js
+try {
+    throw new Error('错误');
+    console.log(11) // 不会执行
+} catch {
+    console.log(22) // 执行
+} finally {
+    console.log(33) // 无论是否有错误，一定会被执行
+}
+```
 - 1
 ```js
 Uncaught (in promise) TypeError: Failed to fetch
