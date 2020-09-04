@@ -160,6 +160,7 @@ module.exports = {
         sidebarDepth: 2,
         children: [
           'base',
+          'theme'
         ]
       }],
       // ================================================核心
