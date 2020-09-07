@@ -84,6 +84,7 @@ new webpack.ProvidePlugin({
    9. 配置代理
 - 常用loader  
    - css loaders
+      - 加～号，类似于一个变量，比如你在webpack中通过alias定义了一些路径为变量，在css中引用时就可以直接以～加路径变量直接引入该路径下文件，而不加的话，应该是 通过相对路径去查找该文件
    - 图片 loader
    - 字体 icon loader
    - js loader

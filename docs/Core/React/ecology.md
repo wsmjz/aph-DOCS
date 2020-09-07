@@ -10,6 +10,15 @@
 - 与react无直接关系的 状态管理器
 - 一个仓库store,包含调度中心(reducer)与state(状态容器)
 - 提供disptch,getState,订阅器
+- 共享types, 在reducer和组件中都会使用
+- store的状态变了，不会刷新组件, 在组件中要订阅变化事件才行
+> 这是一个store仓库，包含
+### reducer 处理器，管理员
+- 接受action
+- 修改state
+### state 状态器
+### subscribe 订阅
+### dispatch 派发
 ## react-redux
 > 说明：与react的整合
 - connect

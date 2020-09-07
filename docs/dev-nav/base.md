@@ -1,4 +1,6 @@
 # 介绍
+> https://segmentfault.com/a/1190000009090836, 花裤衩
+> https://blog.csdn.net/hyupeng1006/article/details/80755667 Vuex与Redux对比
 **Pi Home 是一个完整的一站式解决方案(开发系统) 提供：**
 > [响应式官网.预览](www.baofu.com)<br>
 > [pi-admin.预览](www.baofu.com)<br>
