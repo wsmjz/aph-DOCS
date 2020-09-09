@@ -1,23 +1,37 @@
 # 介绍
+***SW***
+**你去寻得你所爱并为之守望**
 > https://segmentfault.com/a/1190000009090836, 花裤衩
 > https://blog.csdn.net/hyupeng1006/article/details/80755667 Vuex与Redux对比
-**Pi Home 是一个完整的一站式解决方案(开发系统) 提供：**
+- 框架，库，方法的出现都是为了解决某种问题，或是增强某些功能，或是简写，避免错误
+- 解决错误的能力
+```js
+export declare type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+```
+
+## **SW 是一个完整的一站式解决方案(开发系统) 提供：**
 > [响应式官网.预览](www.baofu.com)<br>
 > [pi-admin.预览](www.baofu.com)<br>
-> 这是一个由兴趣而驱动的项目，仅代表个人<br>
-   - 通过 `@pi/cli` 实现的交互式的项目脚手架。
-   - `@pi/ping` 一站式自动化解决方案
+> 这是一个由兴趣而驱动的项目，项目建议规范<br>
+   ### 通过 `@ping/sw-cli` 实现的交互式的项目脚手架。
+   ### `@ping/sw` 一站式自动化解决方案
       - 配置文件 `ping.config.js（可选，）`
       - 代码生成
          - 模拟数据Mock
          - 配置vuex,Store
       - 自动路由配置
-   - `@pi/ui-vue` 原装vue组件库
-   - `@pi/ui-react` 原装react组件库
-   - 自动配置安装官方webpack同用法（考虑是否开发`原装webpack`）
-   - `@pi/schame` 全局校验
-   - 一套丰富的常用插件集合
-   - 一个运行时依赖 `(@pi/cli-service)`，该依赖：
+   ### `@ping/ui-vue` 原装vue组件库
+   ### `@ping/ui-react` 原装react组件库
+   ### 自动配置安装官方webpack同用法（考虑是否开发`原装webpack`）
+   ### `@ping/schame` 全局校验
+   ### `@ping/echarts` 图表
+   ### `@ping/map` 地图
+   ### `@ping/go` 关系图
+   ### `@ping/store` 状态机
+   ### `@ping/router` 路由系统
+   ### `@ping/date` 日期格式化 
+   ### 一套丰富的常用插件集合
+   ### 一个运行时依赖 `(@ping/cli-service)`，该依赖：
       - 可升级
       - 基于 webpack 构建，并带有合理的默认配置
       - 可以通过项目内的配置文件进行配置；
@@ -25,7 +39,7 @@
 
 
 **工程主应用可集成vue, react, jq项目**
-> vue 子应用 为原生 配合`@pi/v-ui` 实现<br>
+> vue 子应用 为原生 配合`@ping/v-ui` 实现<br>
 > react 子应用为antd 实现UI层 <br>
 > jq 子应用实现 官网效果
 
@@ -120,6 +134,56 @@ npm run app add [name] [port]
 
 ## 国际化
 - 写入加载语言包
+```js
+exports['default'] = {
+    locale: 'en',
+    Pagination: _en_US2['default'],
+    DatePicker: _en_US4['default'],
+    TimePicker: _en_US6['default'],
+    Calendar: _en_US8['default'],
+    Table: {
+        filterTitle: 'Filter menu',
+        filterConfirm: 'OK',
+        filterReset: 'Reset',
+        emptyText: 'No data',
+        selectAll: 'Select current page',
+        selectInvert: 'Invert current page'
+    },
+    Modal: {
+        okText: 'OK',
+        cancelText: 'Cancel',
+        justOkText: 'OK'
+    },
+    Popconfirm: {
+        okText: 'OK',
+        cancelText: 'Cancel'
+    },
+    Transfer: {
+        notFoundContent: 'Not Found',
+        searchPlaceholder: 'Search here',
+        itemUnit: 'item',
+        itemsUnit: 'items'
+    },
+    Select: {
+        notFoundContent: 'Not Found'
+    },
+    Upload: {
+        uploading: 'Uploading...',
+        removeFile: 'Remove file',
+        uploadError: 'Upload error',
+        previewFile: 'Preview file'
+    }
+};
+```
+## 测试
+## 持续集成与部署
+- jekens 配置
+- docker 文件
+- nglix 配置
+## 版本与分支
+- tag
+- branch
+
 ## 主题换肤
 - 科技
 - 健康
