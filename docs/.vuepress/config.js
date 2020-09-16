@@ -153,7 +153,7 @@ module.exports = {
       link: '/xcx.md'
     },
     {
-      text: '面试题',
+      text: '面试与待办',
       link: '/question/leetco.md'
     },
     {
@@ -405,7 +405,7 @@ module.exports = {
           'leetco'
         ]
       }, {
-        title: '待完成',
+        title: '待办事项',
         collapsable: true,
         sidebarDepth: 2,
         children: [

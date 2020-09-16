@@ -62,3 +62,6 @@ class Adf {
 }
 let test = (new Adf).aa()
 console.log(test)
+
+
+

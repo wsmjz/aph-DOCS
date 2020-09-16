@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>D3 笔记 | 苹果家+</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="汇聚百川，终成江河">
+    <link rel="preload" href="/assets/css/0.styles.414371df.css" as="style"><link rel="preload" href="/assets/js/app.d0dd5dbf.js" as="script"><link rel="preload" href="/assets/js/2.da19dca9.js" as="script"><link rel="preload" href="/assets/js/15.f45d44d0.js" as="script"><link rel="preload" href="/assets/js/13.6fede14f.js" as="script"><link rel="prefetch" href="/assets/js/10.8a6008c0.js"><link rel="prefetch" href="/assets/js/11.004a607b.js"><link rel="prefetch" href="/assets/js/12.8423d396.js"><link rel="prefetch" href="/assets/js/14.8f0903d8.js"><link rel="prefetch" href="/assets/js/16.7ed9f0fd.js"><link rel="prefetch" href="/assets/js/17.3ab4920b.js"><link rel="prefetch" href="/assets/js/18.a4511bd6.js"><link rel="prefetch" href="/assets/js/19.6183e809.js"><link rel="prefetch" href="/assets/js/20.0486c71d.js"><link rel="prefetch" href="/assets/js/21.f66192f1.js"><link rel="prefetch" href="/assets/js/22.26dcd0c3.js"><link rel="prefetch" href="/assets/js/23.fc79bcd9.js"><link rel="prefetch" href="/assets/js/24.4f0999b5.js"><link rel="prefetch" href="/assets/js/25.ad009b8b.js"><link rel="prefetch" href="/assets/js/26.6fe8b588.js"><link rel="prefetch" href="/assets/js/27.818b0df2.js"><link rel="prefetch" href="/assets/js/28.f5a6f131.js"><link rel="prefetch" href="/assets/js/29.214a14b6.js"><link rel="prefetch" href="/assets/js/3.28ea79ad.js"><link rel="prefetch" href="/assets/js/30.6f2b12a7.js"><link rel="prefetch" href="/assets/js/31.7ace7bce.js"><link rel="prefetch" href="/assets/js/32.975bbe86.js"><link rel="prefetch" href="/assets/js/33.c8e8951c.js"><link rel="prefetch" href="/assets/js/34.333435d6.js"><link rel="prefetch" href="/assets/js/35.c51307b3.js"><link rel="prefetch" href="/assets/js/36.b0068cde.js"><link rel="prefetch" href="/assets/js/37.5f61843d.js"><link rel="prefetch" href="/assets/js/38.5dec9e11.js"><link rel="prefetch" href="/assets/js/39.6b2e95aa.js"><link rel="prefetch" href="/assets/js/4.24406e8f.js"><link rel="prefetch" href="/assets/js/40.d20fecb7.js"><link rel="prefetch" href="/assets/js/41.b4ff0d2e.js"><link rel="prefetch" href="/assets/js/42.9205d9ec.js"><link rel="prefetch" href="/assets/js/43.4b01f96a.js"><link rel="prefetch" href="/assets/js/44.245c628e.js"><link rel="prefetch" href="/assets/js/45.0d22ebbb.js"><link rel="prefetch" href="/assets/js/46.574e7f23.js"><link rel="prefetch" href="/assets/js/47.19f49f30.js"><link rel="prefetch" href="/assets/js/48.fb51711e.js"><link rel="prefetch" href="/assets/js/49.8aab55da.js"><link rel="prefetch" href="/assets/js/5.6d4f1491.js"><link rel="prefetch" href="/assets/js/50.a1101265.js"><link rel="prefetch" href="/assets/js/51.62df11b3.js"><link rel="prefetch" href="/assets/js/52.eded4b37.js"><link rel="prefetch" href="/assets/js/53.b126cec3.js"><link rel="prefetch" href="/assets/js/54.62a212f2.js"><link rel="prefetch" href="/assets/js/55.2278dfc6.js"><link rel="prefetch" href="/assets/js/6.ac949433.js"><link rel="prefetch" href="/assets/js/7.72ada57c.js"><link rel="prefetch" href="/assets/js/8.c5bc4e2b.js"><link rel="prefetch" href="/assets/js/9.4433321c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.414371df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">苹果家+</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dev-nav/base.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="UI组件生态" class="dropdown-title"><span class="title">UI组件生态</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/components/jg/button.html" class="nav-link">
+  结构组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/yw/note.html" class="nav-link">
+  业务组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/lc/note.html" class="nav-link">
+  流程图组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/button.html" class="nav-link">
+  地图组件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          项目
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-vue(简版vue)
+</a></li><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-react(简版react)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-offical-vue(响应式)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-xcx
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  H5商城
+</a></li></ul></li><li class="dropdown-item"><h4>
+          资源
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/components/jg/button.html" class="nav-link">
+  UI库-vue
+</a></li><li class="dropdown-subitem"><a href="/ecology/dev/devtools.html" class="nav-link">
+  基础资源ping-base-lib
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  pi(核心，自动化配置)
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  脚手架ping-cli
+</a></li><li class="dropdown-subitem"><a href="/ecology/webpack.html" class="nav-link">
+  打包工具ping-webpack
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  校验库
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  路由
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  日期
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  图表
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  地图
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  关系流程图
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心" class="dropdown-title"><span class="title">核心</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Api/base.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/Core/V8/base.html" class="nav-link">
+  js(v8)引擎
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Achieve/base.html" class="nav-link">
+  原理实现
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/base.html" class="nav-link">
+  Vue概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/React/base.html" class="nav-link">
+  React概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/MyWebpack/base.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/xingneng/base.html" class="nav-link">
+  性能优化
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="可视化" class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Cansee/three.html" class="nav-link">
+  three.js
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/D3.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  D3
+</a></li></ul></div></div><div class="nav-item"><a href="/zaji/js/base.html" class="nav-link">
+  杂记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="进阶" class="dropdown-title"><span class="title">进阶</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jingjie/sjjg.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/suanfa/base.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/base.html" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/.html" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><a href="/xcx.html" class="nav-link">
+  第三方库
+</a></div><div class="nav-item"><a href="/question/leetco.html" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/cause/main.html" class="nav-link">
+  创想
+</a></div> <a href="https://github.com/wsmjz" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dev-nav/base.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="UI组件生态" class="dropdown-title"><span class="title">UI组件生态</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/components/jg/button.html" class="nav-link">
+  结构组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/yw/note.html" class="nav-link">
+  业务组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/lc/note.html" class="nav-link">
+  流程图组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/button.html" class="nav-link">
+  地图组件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          项目
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-vue(简版vue)
+</a></li><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-react(简版react)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-offical-vue(响应式)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-xcx
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  H5商城
+</a></li></ul></li><li class="dropdown-item"><h4>
+          资源
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/components/jg/button.html" class="nav-link">
+  UI库-vue
+</a></li><li class="dropdown-subitem"><a href="/ecology/dev/devtools.html" class="nav-link">
+  基础资源ping-base-lib
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  pi(核心，自动化配置)
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  脚手架ping-cli
+</a></li><li class="dropdown-subitem"><a href="/ecology/webpack.html" class="nav-link">
+  打包工具ping-webpack
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  校验库
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  路由
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  日期
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  图表
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  地图
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  关系流程图
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心" class="dropdown-title"><span class="title">核心</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Api/base.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/Core/V8/base.html" class="nav-link">
+  js(v8)引擎
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Achieve/base.html" class="nav-link">
+  原理实现
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/base.html" class="nav-link">
+  Vue概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/React/base.html" class="nav-link">
+  React概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/MyWebpack/base.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/xingneng/base.html" class="nav-link">
+  性能优化
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="可视化" class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Cansee/three.html" class="nav-link">
+  three.js
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/D3.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  D3
+</a></li></ul></div></div><div class="nav-item"><a href="/zaji/js/base.html" class="nav-link">
+  杂记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="进阶" class="dropdown-title"><span class="title">进阶</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jingjie/sjjg.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/suanfa/base.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/base.html" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/.html" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><a href="/xcx.html" class="nav-link">
+  第三方库
+</a></div><div class="nav-item"><a href="/question/leetco.html" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/cause/main.html" class="nav-link">
+  创想
+</a></div> <a href="https://github.com/wsmjz" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>可视化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Cansee/three.html" class="sidebar-link">可视化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Cansee/three.html#echarts-heightcharts" class="sidebar-link">echarts,heightcharts</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#svg" class="sidebar-link">svg</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#canvas" class="sidebar-link">canvas</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#d3" class="sidebar-link">d3</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#three" class="sidebar-link">three</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#pixijs" class="sidebar-link">pixijs</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#流程图" class="sidebar-link">流程图</a></li><li class="sidebar-sub-header"><a href="/Cansee/three.html#可视化表单" class="sidebar-link">可视化表单</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="d3-笔记"><a href="#d3-笔记" class="header-anchor">#</a> D3 笔记</h1> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/1/2020, 11:02:44 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d0dd5dbf.js" defer></script><script src="/assets/js/2.da19dca9.js" defer></script><script src="/assets/js/15.f45d44d0.js" defer></script><script src="/assets/js/13.6fede14f.js" defer></script>
+  </body>
+</html>

@@ -5,6 +5,8 @@
    1. 单向数据流
    2. 技能规范要求，限制少，灵活，重原生
    - hooks 可以跨度传值 相当于 provide/inject
+## jsx
+- DOM元素会经过bable编译([解释器](https://www.babeljs.cn/repl))，再经过react提供的createElement方法转化成react元素
 ## 属性
 - 类型校验`react-type`
 ## 状态
@@ -207,6 +209,8 @@ function FriendListItem(props) {
 
 
 ## 注意项
+- react与vue在设计模式上的不同
+   - vue是单例模式(构造函数, 构造函数中有this,所以vue中有this)，react是class类语法(super是如何绑定的this)
 - this绑定
 ```js
 // 1.

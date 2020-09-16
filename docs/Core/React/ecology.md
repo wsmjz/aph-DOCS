@@ -7,6 +7,7 @@
 ## redux-immutable
 - 统一管理：state也处理成immutable数据
 ## redux
+> 核心思想：视图派发action，reducer处理更新state，subscribe订阅数据变化
 - 与react无直接关系的 状态管理器
 - 一个仓库store,包含调度中心(reducer)与state(状态容器)
 - 提供disptch,getState,订阅器
@@ -14,8 +15,10 @@
 - store的状态变了，不会刷新组件, 在组件中要订阅变化事件才行
 > 这是一个store仓库，包含
 ### reducer 处理器，管理员
-- 接受action
-- 修改state
+- reducer 只是一个接收 state 和 action，并返回新的 state 的函数。
+   - 接受action
+   - 修改state
+- 大型应用拆分reducer
 ### state 状态器
 ### subscribe 订阅
 ### dispatch 派发

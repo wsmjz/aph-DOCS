@@ -77,6 +77,7 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 
 ## 文章博客
 ### umi原理探究
+- kry文章分享
 - 链接，致谢
 
 ## 运维
@@ -126,6 +127,10 @@ npm run dist // 生成压缩文件dist package.json main 里面引入dist 删除
 - umi
 - 小程序
 - 硬件接口（定制化手机日历通知）
+## 未理解问题
+```js
+export declare type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+```
 ## 大类问题
 - tabs 返回当前列表问题 分页返回当前页 搜索返回当前条件页
    - 每个table 一个组件

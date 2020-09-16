@@ -1,41 +1,34 @@
 # 介绍
-***SW***
-**你去寻得你所爱并为之守望**
-> https://segmentfault.com/a/1190000009090836, 花裤衩
-> https://blog.csdn.net/hyupeng1006/article/details/80755667 Vuex与Redux对比
-- 框架，库，方法的出现都是为了解决某种问题，或是增强某些功能，或是简写，避免错误
-- 解决错误的能力
-```js
-export declare type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-```
-
-## **SW 是一个完整的一站式解决方案(开发系统) 提供：**
+**你去寻得你所爱并为之守望**<br>
+**SW 是一个完整的一站式解决方案(开发系统) 提供：**
 > [响应式官网.预览](www.baofu.com)<br>
-> [pi-admin.预览](www.baofu.com)<br>
+> [shouwang演示](www.baofu.com)<br>
 > 这是一个由兴趣而驱动的项目，项目建议规范<br>
-   ### 通过 `@ping/sw-cli` 实现的交互式的项目脚手架。
-   ### `@ping/sw` 一站式自动化解决方案
+   - 通过 `@ping/sw-cli` 实现的交互式的项目脚手架。
+   - `@ping/sw` 一站式自动化解决方案
       - 配置文件 `ping.config.js（可选，）`
       - 代码生成
          - 模拟数据Mock
          - 配置vuex,Store
       - 自动路由配置
-   ### `@ping/ui-vue` 原装vue组件库
-   ### `@ping/ui-react` 原装react组件库
-   ### 自动配置安装官方webpack同用法（考虑是否开发`原装webpack`）
-   ### `@ping/schame` 全局校验
-   ### `@ping/echarts` 图表
-   ### `@ping/map` 地图
-   ### `@ping/go` 关系图
-   ### `@ping/store` 状态机
-   ### `@ping/router` 路由系统
-   ### `@ping/date` 日期格式化 
-   ### 一套丰富的常用插件集合
-   ### 一个运行时依赖 `(@ping/cli-service)`，该依赖：
+   - `@ping/ui-vue` 原装vue组件库
+   - `@ping/ui-react` 原装react组件库
+   - 自动配置安装官方webpack同用法（考虑是否开发`原装webpack`）
+   - `@ping/schame` 全局校验
+   - `@ping/echarts` 图表
+   - `@ping/map` 地图
+   - `@ping/go` 关系图
+   - `@ping/store` 状态机
+   - `@ping/router` 路由系统
+   - `@ping/date` 日期格式化 
+   - 一套丰富的常用插件集合
+   - 一个运行时依赖 `(@ping/cli-service)`，该依赖：
       - 可升级
       - 基于 webpack 构建，并带有合理的默认配置
       - 可以通过项目内的配置文件进行配置；
       - 可以通过插件进行扩展。
+   - http-serve，axios
+   - 性能监控
 
 
 **工程主应用可集成vue, react, jq项目**
@@ -119,6 +112,9 @@ npm run app add [name] [port]
 ## 业务模块集
 - 购物车
 - 地址管理
+## 权限校验
+- jwt登陆认证
+- 视图鉴权
 ## 监控错误处理与上报
 > 及时发现错误
 - 运行时
@@ -189,13 +185,15 @@ exports['default'] = {
 - 健康
 - 明亮
 
-## 样式规范
-- 色彩
-- border
-- 间距
-- 投影
-- padding
-- 文字
+## 样式规范(统一变量)
+- 建议全部使用shouwang内置scss变量，[参考主题]()
+- 抽离文件统一设置变量（方便统一使用`调色板变量`改颜色）
+   - $border--color：$red-1
+   - 色彩$color-primary: $blue-1
+   - 间距
+   - 投影
+   - padding
+   - 文字
 ### 规范命名词汇
 - `warp` 组件容器
 - `nav` 导航
@@ -203,11 +201,10 @@ exports['default'] = {
 - `selider` 侧栏
 - `main` 主要内容
 - `footer` 页脚
-## 业务规范
-- 构建工具
-- 命名规范
-- 设计规范
-- 文件结构
+## 命名
+- 文件夹以`-`连接
+- 方法为小驼峰
+   - 获取get
 ## 流程规范
 - 分支管理
 - 环境管理
@@ -221,3 +218,13 @@ exports['default'] = {
    - 纯函数编程 易于观测 返现问题
 - 声明式
 - 命令式
+
+## 业务规范（shouwang规范）
+- 使用ping-cli创建项目demo
+- 使用ping-webpack构建工具
+- 设计规范
+   - 内置市场高频业务场景
+   - 设计与项目的匹配妥协，非特别业务，设计妥协于框架，框架可向特别业务妥协
+- 新建文件结构
+- 命名规范
+   - 同上

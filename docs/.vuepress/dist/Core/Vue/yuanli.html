@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>源码原理认识 | 苹果家+</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="汇聚百川，终成江河">
+    <link rel="preload" href="/assets/css/0.styles.414371df.css" as="style"><link rel="preload" href="/assets/js/app.d0dd5dbf.js" as="script"><link rel="preload" href="/assets/js/2.da19dca9.js" as="script"><link rel="preload" href="/assets/js/28.f5a6f131.js" as="script"><link rel="preload" href="/assets/js/13.6fede14f.js" as="script"><link rel="prefetch" href="/assets/js/10.8a6008c0.js"><link rel="prefetch" href="/assets/js/11.004a607b.js"><link rel="prefetch" href="/assets/js/12.8423d396.js"><link rel="prefetch" href="/assets/js/14.8f0903d8.js"><link rel="prefetch" href="/assets/js/15.f45d44d0.js"><link rel="prefetch" href="/assets/js/16.7ed9f0fd.js"><link rel="prefetch" href="/assets/js/17.3ab4920b.js"><link rel="prefetch" href="/assets/js/18.a4511bd6.js"><link rel="prefetch" href="/assets/js/19.6183e809.js"><link rel="prefetch" href="/assets/js/20.0486c71d.js"><link rel="prefetch" href="/assets/js/21.f66192f1.js"><link rel="prefetch" href="/assets/js/22.26dcd0c3.js"><link rel="prefetch" href="/assets/js/23.fc79bcd9.js"><link rel="prefetch" href="/assets/js/24.4f0999b5.js"><link rel="prefetch" href="/assets/js/25.ad009b8b.js"><link rel="prefetch" href="/assets/js/26.6fe8b588.js"><link rel="prefetch" href="/assets/js/27.818b0df2.js"><link rel="prefetch" href="/assets/js/29.214a14b6.js"><link rel="prefetch" href="/assets/js/3.28ea79ad.js"><link rel="prefetch" href="/assets/js/30.6f2b12a7.js"><link rel="prefetch" href="/assets/js/31.7ace7bce.js"><link rel="prefetch" href="/assets/js/32.975bbe86.js"><link rel="prefetch" href="/assets/js/33.c8e8951c.js"><link rel="prefetch" href="/assets/js/34.333435d6.js"><link rel="prefetch" href="/assets/js/35.c51307b3.js"><link rel="prefetch" href="/assets/js/36.b0068cde.js"><link rel="prefetch" href="/assets/js/37.5f61843d.js"><link rel="prefetch" href="/assets/js/38.5dec9e11.js"><link rel="prefetch" href="/assets/js/39.6b2e95aa.js"><link rel="prefetch" href="/assets/js/4.24406e8f.js"><link rel="prefetch" href="/assets/js/40.d20fecb7.js"><link rel="prefetch" href="/assets/js/41.b4ff0d2e.js"><link rel="prefetch" href="/assets/js/42.9205d9ec.js"><link rel="prefetch" href="/assets/js/43.4b01f96a.js"><link rel="prefetch" href="/assets/js/44.245c628e.js"><link rel="prefetch" href="/assets/js/45.0d22ebbb.js"><link rel="prefetch" href="/assets/js/46.574e7f23.js"><link rel="prefetch" href="/assets/js/47.19f49f30.js"><link rel="prefetch" href="/assets/js/48.fb51711e.js"><link rel="prefetch" href="/assets/js/49.8aab55da.js"><link rel="prefetch" href="/assets/js/5.6d4f1491.js"><link rel="prefetch" href="/assets/js/50.a1101265.js"><link rel="prefetch" href="/assets/js/51.62df11b3.js"><link rel="prefetch" href="/assets/js/52.eded4b37.js"><link rel="prefetch" href="/assets/js/53.b126cec3.js"><link rel="prefetch" href="/assets/js/54.62a212f2.js"><link rel="prefetch" href="/assets/js/55.2278dfc6.js"><link rel="prefetch" href="/assets/js/6.ac949433.js"><link rel="prefetch" href="/assets/js/7.72ada57c.js"><link rel="prefetch" href="/assets/js/8.c5bc4e2b.js"><link rel="prefetch" href="/assets/js/9.4433321c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.414371df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">苹果家+</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/dev-nav/base.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="UI组件生态" class="dropdown-title"><span class="title">UI组件生态</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/components/jg/button.html" class="nav-link">
+  结构组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/yw/note.html" class="nav-link">
+  业务组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/lc/note.html" class="nav-link">
+  流程图组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/button.html" class="nav-link">
+  地图组件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          项目
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-vue(简版vue)
+</a></li><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-react(简版react)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-offical-vue(响应式)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-xcx
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  H5商城
+</a></li></ul></li><li class="dropdown-item"><h4>
+          资源
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/components/jg/button.html" class="nav-link">
+  UI库-vue
+</a></li><li class="dropdown-subitem"><a href="/ecology/dev/devtools.html" class="nav-link">
+  基础资源ping-base-lib
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  pi(核心，自动化配置)
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  脚手架ping-cli
+</a></li><li class="dropdown-subitem"><a href="/ecology/webpack.html" class="nav-link">
+  打包工具ping-webpack
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  校验库
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  路由
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  日期
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  图表
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  地图
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  关系流程图
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心" class="dropdown-title"><span class="title">核心</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Api/base.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/Core/V8/base.html" class="nav-link">
+  js(v8)引擎
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Achieve/base.html" class="nav-link">
+  原理实现
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/base.html" class="nav-link">
+  Vue概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/React/base.html" class="nav-link">
+  React概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/MyWebpack/base.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/xingneng/base.html" class="nav-link">
+  性能优化
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="可视化" class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Cansee/three.html" class="nav-link">
+  three.js
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/D3.html" class="nav-link">
+  D3
+</a></li></ul></div></div><div class="nav-item"><a href="/zaji/js/base.html" class="nav-link">
+  杂记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="进阶" class="dropdown-title"><span class="title">进阶</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jingjie/sjjg.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/suanfa/base.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/base.html" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/.html" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><a href="/xcx.html" class="nav-link">
+  第三方库
+</a></div><div class="nav-item"><a href="/question/leetco.html" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/cause/main.html" class="nav-link">
+  创想
+</a></div> <a href="https://github.com/wsmjz" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/dev-nav/base.html" class="nav-link">
+  指南
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="UI组件生态" class="dropdown-title"><span class="title">UI组件生态</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/components/jg/button.html" class="nav-link">
+  结构组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/yw/note.html" class="nav-link">
+  业务组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/lc/note.html" class="nav-link">
+  流程图组件
+</a></li><li class="dropdown-item"><!----> <a href="/components/button.html" class="nav-link">
+  地图组件
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="生态系统" class="dropdown-title"><span class="title">生态系统</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          项目
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-vue(简版vue)
+</a></li><li class="dropdown-subitem"><a href="/ecology/admin/vue.html" class="nav-link">
+  ping-react(简版react)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-offical-vue(响应式)
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  ping-xcx
+</a></li><li class="dropdown-subitem"><a href="/ecology/inst.html" class="nav-link">
+  H5商城
+</a></li></ul></li><li class="dropdown-item"><h4>
+          资源
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/components/jg/button.html" class="nav-link">
+  UI库-vue
+</a></li><li class="dropdown-subitem"><a href="/ecology/dev/devtools.html" class="nav-link">
+  基础资源ping-base-lib
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  pi(核心，自动化配置)
+</a></li><li class="dropdown-subitem"><a href="/ecology/cli/cli.html" class="nav-link">
+  脚手架ping-cli
+</a></li><li class="dropdown-subitem"><a href="/ecology/webpack.html" class="nav-link">
+  打包工具ping-webpack
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  校验库
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  状态管理
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  路由
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  日期
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  图表
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  地图
+</a></li><li class="dropdown-subitem"><a href="/ecology/schema.html" class="nav-link">
+  关系流程图
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="核心" class="dropdown-title"><span class="title">核心</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Core/Api/base.html" class="nav-link">
+  基础
+</a></li><li class="dropdown-item"><!----> <a href="/Core/V8/base.html" class="nav-link">
+  js(v8)引擎
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Achieve/base.html" class="nav-link">
+  原理实现
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/base.html" class="nav-link">
+  Vue概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/React/base.html" class="nav-link">
+  React概记
+</a></li><li class="dropdown-item"><!----> <a href="/Core/MyWebpack/base.html" class="nav-link">
+  webpack
+</a></li></ul></div></div><div class="nav-item"><a href="/xingneng/base.html" class="nav-link">
+  性能优化
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="可视化" class="dropdown-title"><span class="title">可视化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Cansee/three.html" class="nav-link">
+  three.js
+</a></li><li class="dropdown-item"><!----> <a href="/Cansee/D3.html" class="nav-link">
+  D3
+</a></li></ul></div></div><div class="nav-item"><a href="/zaji/js/base.html" class="nav-link">
+  杂记
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="进阶" class="dropdown-title"><span class="title">进阶</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/jingjie/sjjg.html" class="nav-link">
+  数据结构
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/suanfa/base.html" class="nav-link">
+  算法
+</a></li><li class="dropdown-item"><!----> <a href="/jingjie/base.html" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/.html" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/Core/Vue/.html" class="nav-link">
+  python
+</a></li></ul></div></div><div class="nav-item"><a href="/xcx.html" class="nav-link">
+  第三方库
+</a></div><div class="nav-item"><a href="/question/leetco.html" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="/cause/main.html" class="nav-link">
+  创想
+</a></div> <a href="https://github.com/wsmjz" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue概记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>常见问题</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>源码认识</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Core/Vue/yuanli.html" aria-current="page" class="active sidebar-link">源码原理认识</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_1-rollup" class="sidebar-link">1. rollup</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_2-响应式原理" class="sidebar-link">2. 响应式原理</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_3-模板编译" class="sidebar-link">3. 模板编译</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_4-创建渲染watcher" class="sidebar-link">4. 创建渲染watcher</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_5-生命周期" class="sidebar-link">5. 生命周期</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_6-依赖收集" class="sidebar-link">6. 依赖收集</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#_7-异步更新nexttick" class="sidebar-link">7. 异步更新nextTick</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#api实现原理" class="sidebar-link">Api实现原理</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#其他" class="sidebar-link">其他</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#响应式" class="sidebar-link">响应式</a></li><li class="sidebar-sub-header"><a href="/Core/Vue/yuanli.html#模板编译" class="sidebar-link">模板编译</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="源码原理认识"><a href="#源码原理认识" class="header-anchor">#</a> 源码原理认识</h1> <blockquote><p>mount 断点</p></blockquote> <ol><li>package.json &quot;build&quot;: &quot;node scripts/build.js&quot;</li> <li>scripts/build.js 文件</li></ol> <ul><li>作用是使用rollup打包源代码</li> <li>./config 文件查看入口文件</li></ul> <ol start="3"><li>入口文件src</li></ol> <ul><li>platforms 平台
+<ul><li>web/entry-runtime-with-compiler.js (看Vue引入路劲)</li> <li>runtime / compiler 区别 （编译vue中的template）</li> <li>找到 runtime/index 文件</li></ul></li></ul> <ol start="4"><li>runtime/index 文件
+<ul><li>Vue.prototype.<strong>patch</strong> (比对dom)</li> <li>找到 core/index (核心文件)</li> <li>mountComponent 挂载逻辑
+<ul><li>core/instance/lifecyle</li> <li>updataComponent <strong>组件级更新</strong> -- 只要一new 就将这个watcher放到Dep.target</li></ul></li></ul> <ol start="5"><li>core/index (核心文件)
+<ul><li>initGlobalApi 初始化全局api
+<ul><li>Vue.util
+<ul><li>definReactive , 宏任务-先执行，微任务</li> <li>set</li> <li>delect</li> <li>nextTick (下一事件环 eventLoop)</li> <li>initUse Vue.use()</li> <li>initMixin Vue.mixin ==&gt; mergeOptions 合并选项 如果重名的变成数组 [beforeCreater]</li> <li>initExtend Vue.extend  产生一个子类  让子类继承Vue</li></ul></li></ul></li> <li>instance/index 真正的Vue 构造函数
+<ul><li>initMixin(Vue) 初始化mixin
+<ul><li>initLifecycle(vm) 初始化父子关系 $parent $ref</li> <li>initEvents(vm)  初始化events属性 {}</li> <li>initRender(vm) vm.$createElement =&gt; h() 方法</li> <li>callHook(vm, 'beforeCreate') 调用beforeCreate</li> <li>initInjections() 初始化注入数据 一直向上寻找——provided</li> <li>initState(vm) 响应式原理 MVVM  data Props methods watch computed</li> <li>initProvide(vm)  vm._provided 定义属性</li> <li>callHook(vm, 'created')</li></ul></li> <li>stateMixin this.$set this.$delete 混合全局方法 添加到原型上</li> <li>eventsMixin $on $once $off $emit 用到了发布订阅</li> <li>lifecycleMixin
+<ol><li>Vue.prototype._updata</li> <li>$forceUpdata(调用watcher 的updata)  $destory(组件销毁，解绑父子关系， <em>没有清空视图</em>)</li></ol></li> <li>renderMixin Vue.prototype_render $nextTick</li></ul></li></ul></li></ol></li></ol> <h2 id="_1-rollup"><a href="#_1-rollup" class="header-anchor">#</a> 1. rollup</h2> <h2 id="_2-响应式原理"><a href="#_2-响应式原理" class="header-anchor">#</a> 2. 响应式原理</h2> <blockquote><p>Observer, Watcher, 数据劫持</p></blockquote> <h2 id="_3-模板编译"><a href="#_3-模板编译" class="header-anchor">#</a> 3. 模板编译</h2> <blockquote><p>Compile</p></blockquote> <ul><li>render函数</li> <li>文档碎片 遍历
+<ul><li>获取Dom节点属性 node.attributes // 类数组 [...attrs] type=&quot;type&quot; v-model=&quot;message&quot;</li> <li>编译{{}} 获取文本节点内容 node.textContent</li> <li>改名字value</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> value<span class="token operator">:</span>expr<span class="token punctuation">]</span> <span class="token operator">=</span> attr
+</code></pre></div></li></ul> <h2 id="_4-创建渲染watcher"><a href="#_4-创建渲染watcher" class="header-anchor">#</a> 4. 创建渲染watcher</h2> <h2 id="_5-生命周期"><a href="#_5-生命周期" class="header-anchor">#</a> 5. 生命周期</h2> <h2 id="_6-依赖收集"><a href="#_6-依赖收集" class="header-anchor">#</a> 6. 依赖收集</h2> <h2 id="_7-异步更新nexttick"><a href="#_7-异步更新nexttick" class="header-anchor">#</a> 7. 异步更新nextTick</h2> <h2 id="api实现原理"><a href="#api实现原理" class="header-anchor">#</a> Api实现原理</h2> <ul><li>$emit</li> <li>set()</li> <li>指令
+<ul><li>v-on</li> <li>v-bind(简写:)</li></ul></li></ul> <h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <ul><li>一个.vue文件会返回什么</li></ul> <h2 id="响应式"><a href="#响应式" class="header-anchor">#</a> 响应式</h2> <ul><li>对象监听</li> <li>数组监听</li></ul> <h2 id="模板编译"><a href="#模板编译" class="header-anchor">#</a> 模板编译</h2> <ul><li><p>正则解析标签和内容</p></li> <li><p>生成ast语法树</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> ast <span class="token operator">=</span> <span class="token function">parseHtml</span><span class="token punctuation">(</span>template<span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>生成代码</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> code <span class="token operator">=</span> <span class="token function">generate</span><span class="token punctuation">(</span>ast<span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>编译为<code>render</code>函数</p></li></ul> <blockquote><p>先解析render选项，再template，最后外部模块<br>
+注意: template模板中不可以字符串开头 必须标签开头</p></blockquote> <ul><li>render函数将模板字符串 转化为 ast 抽象语法树
+<ul><li>正则解析</li> <li>前进删除<code>advance</code>函数</li></ul></li></ul> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">8/20/2020, 6:48:51 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Core/Vue/vue-review/note.html" class="prev">
+        1.谈一下你对MVVM 原理的理解
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.d0dd5dbf.js" defer></script><script src="/assets/js/2.da19dca9.js" defer></script><script src="/assets/js/28.f5a6f131.js" defer></script><script src="/assets/js/13.6fede14f.js" defer></script>
+  </body>
+</html>
