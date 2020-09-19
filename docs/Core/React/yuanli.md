@@ -87,3 +87,31 @@ b.m // undefined
 ## redux
 - 40：10
 - combineReducers
+
+### createStore()
+实现原理
+```js
+
+```
+
+### bindActionCreators()
+实现原理
+```js
+
+```
+
+### combinReducers()
+实现原理
+```js
+
+```
+
+### Provider()
+供应商，提供者
+```js
+
+```
+### connect()
+```js
+
+```
