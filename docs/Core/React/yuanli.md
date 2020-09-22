@@ -121,6 +121,55 @@ export default function(mapStateToProps, mapDispatchToProps) {
   } 
 }
 ```
+### applyMiddleware()
 ## 中间件
 本质就是函数劫持，函数切片，重写dispatch方法：加入执行dispatch方法，之前，之后处理逻辑，或延迟处理
-### 日志中间件
+- 级联中间件composedFn
+```js
+function add1(str) {
+  return '1' + str
+}
+function compose(add3, add2, add1) {
+  return function(str) {
+    return add3(add2(add1(str)))
+  }
+}
+function compose(...fns) {
+  return fns.reduce((a, b) => (...args) => a(b(...args)))
+}
+let composedFn = compose(add3, add2, add1)
+let result = composedFn('hahh')
+```
+### koa
+- reduce实现
+- 中间件基于koa 仿照
+### 日志中间件logger
+
+### thunk
+```js
+function promise({dispatch, getState}) {
+  return function(next) {
+    return function(action) {
+      if(typeof action === 'function') {
+        action(dispatch, getState)
+      } else {
+        next(action)
+      }
+    }
+  }
+}
+```
+### promise
+```js
+function promise({dispatch, getState}) {
+  return function(next) {
+    return function(action) {
+      if(typeof action.then === 'function') { // 说明外面传了一个promise
+        action.then(dispatch)
+      } else {
+        next(action)
+      }
+    }
+  }
+}
+```
