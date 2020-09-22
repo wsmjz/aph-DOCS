@@ -1,4 +1,5 @@
 # vscode 篇
+- 函数上一行 输入`/**`回车，快速生成注释
 ## 插件
 - `Auto Rename Tag` 自动同步修改前后标签名
 - `vscode-icons` 给文件加上图标
