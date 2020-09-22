@@ -9,10 +9,6 @@ module.exports = {
     repoLabel: 'GitHub',
     nav: [
     {
-      text: '指南',
-      link: '/dev-nav/base'
-    },
-    {
       text: 'UI组件生态',
       items: [{
         text: '结构组件',
@@ -161,14 +157,6 @@ module.exports = {
       link: '/cause/main.md'
     }],
     sidebar: {
-      '/dev-nav/': [{
-        title: '指南',
-        sidebarDepth: 2,
-        children: [
-          'base',
-          'theme'
-        ]
-      }],
       // ================================================核心
       '/Core/Achieve/': [{
         title: '原理实现',
@@ -394,7 +382,8 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 2,
         children: [
-          'main'
+          'main',
+          'gupiao'
         ]
       }],
       '/question/': [{

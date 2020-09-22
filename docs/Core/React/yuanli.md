@@ -87,3 +87,40 @@ b.m // undefined
 ## redux
 - 40：10
 - combineReducers
+
+### createStore()
+实现原理
+```js
+
+```
+
+### bindActionCreators()
+实现原理
+```js
+
+```
+
+### combinReducers()
+实现原理
+```js
+
+```
+
+### Provider()
+供应商，提供者
+```js
+
+```
+### connect()
+```js
+export default function(mapStateToProps, mapDispatchToProps) {
+  return function(OldComponent) {
+    return function(props) {
+      let content = useContent()
+    }
+  } 
+}
+```
+## 中间件
+本质就是函数劫持，函数切片，重写dispatch方法：加入执行dispatch方法，之前，之后处理逻辑，或延迟处理
+### 日志中间件

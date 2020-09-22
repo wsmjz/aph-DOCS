@@ -1,6 +1,27 @@
 # 核心实现
 ## 节流函数
 ## 防抖函数
+## 扁平
+```js
+export const flattenTree = (data) => {
+  let key = 0;
+  function flat(data, parent) { // 数组拍平
+    return data.reduce((obj, currentNode) => { // [{},{}]
+        currentNode.key = key; // 给每个节点添加一个标识
+        obj[key] = {
+            parent,
+            node: currentNode
+        }
+        key++;
+        if (currentNode.children) {
+            obj = { ...obj, ...flat(currentNode.children, currentNode) }
+        }
+        return obj
+    }, {})
+  }
+  return flat(data)
+}
+```
 ## 柯里化函数
 - curring 函数
 ## compose 函数
