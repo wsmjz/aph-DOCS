@@ -123,7 +123,60 @@ export default function(mapStateToProps, mapDispatchToProps) {
 ```
 ### applyMiddleware()
 ## 中间件
-本质就是函数劫持，函数切片，重写dispatch方法：加入执行dispatch方法，之前，之后处理逻辑，或延迟处理
+本质就是函数劫持，函数切片，重写dispatch方法：加入执行dispatch方法，之前，之后处理逻辑，或延迟处理<br>
+```js
+// store.js 中
+let enhancer = applyMiddleware(_routerMiddleware, ...Middlewares.middlewares, loyaltyErrorMidware) // applyMiddleware =》redux提供
+const store = createStore(rootReducer, _initialState, enhancer);
+
+FetchRequest.connectToRedux(store);
+
+export default store;
+```
+```js
+// 统一处理提示语
+import { message } from 'antd';
+import { Actions } from 'kryfe-lib';
+
+export default function errorMiddleware({ dispatch }) {
+  return next => action => {
+    let opDecribe = isENLanguage ? 'operation' : '操作';
+    if (typeof action.messageInfo === 'string') {
+      opDecribe = action.messageInfo;
+    }
+    if (
+      action.error &&
+      action.payload.data &&
+      action.payload.data.code !== 30200
+    ) {
+      message.destroy();
+      if (
+        action.payload.data &&
+        (action.payload.data.code === 3 || action.payload.data.code === 2)
+      ) {
+        isENLanguage
+          ? message.error(action.payload.message || `${opDecribe} failed`)
+          : message.error(action.payload.message || `${opDecribe}失败`);
+        dispatch(Actions.systemCleanError());
+      } else {
+        isENLanguage
+          ? message.error(action.payload.message || `${opDecribe}failed`)
+          : message.error(action.payload.message || `${opDecribe}失败`);
+      }
+      return null;
+    }
+    if (!action.ignoreSuccess && action.messageInfo) {
+      message.destroy();
+      isENLanguage
+        ? message.success(`${opDecribe} success`)
+        : message.success(`${opDecribe}成功`);
+    }
+    return next(action);
+  };
+}
+
+```
+- 有的中间件有次序要求，使用前要查一下文档。比如，logger就一定要放在最后，否则输出结果会不正确
 - 级联中间件composedFn
 ```js
 function add1(str) {
@@ -172,4 +225,95 @@ function promise({dispatch, getState}) {
     }
   }
 }
+```
+### routerMiddleware
+```js
+import { routerMiddleware } from 'react-router-redux';
+```
+
+## 多引入
+```js
+import getLocale, { getLocaleFolder, antdLans } from 'shared/utils/getLocale';
+```
+```js
+import antdZhCn from 'antd/lib/locale-provider/zh_CN';
+import antdEnUs from 'antd/lib/locale-provider/en_US';
+
+const EnUs = 'en_US';
+const ZhCn = 'zh_CN';
+
+/* 国际化 */
+function getCookie(name) {
+  var arr,
+    reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)');
+  if ((arr = document.cookie.match(reg))) return unescape(arr[2]);
+  else return null;
+}
+
+export default function getLocale() {
+  /* 国际化 */
+  // const locale = __SERVER__ ? global.__LOCALE__ : window.navigator.language;
+  let locale = getCookie('language');
+  console.log('locale---', locale);
+  if (locale === 'en_GB') {
+    locale = 'en';
+  }
+  return locale || 'zh';
+}
+
+export function getLocaleFolder(locale) {
+  switch (locale) {
+    case 'en':
+      return EnUs;
+    case 'zh':
+      return ZhCn;
+    default:
+      return ZhCn;
+  }
+}
+
+export const antdLans = {
+  [ZhCn]: antdZhCn,
+  [EnUs]: antdEnUs,
+};
+
+```
+
+## 功能件
+- 可以对这个类做增强
+```js
+import React from 'react';
+import { connect } from 'react-redux';
+import Loading from 'shared/components/Loading';
+
+export default function LoadingOrError(InComponent, needLogin = true, showError = true) {
+  class ContainerComponent extends React.Component {
+    render() {
+      const hasLoginInfo = this.props.loginInfo && this.props.loginInfo.get('brand');
+      const loginJudgeEnd = this.props.loginInfo.get('loginJudgeEnd');
+      return (
+        <div>
+          {
+            !needLogin || hasLoginInfo?
+            <InComponent {...this.props} /> : null
+          }
+          {this.props.loaingStatus ? (
+            <Loading />
+          ) : null}
+        </div>
+      );
+    }
+  }
+  return connect(state => ({
+      loginInfo: state.baseApi.loginInfo,
+      loaingStatus: state.__system__.loading.get('display'),
+      errorType: state.__system__.error.get('type')
+    })
+  )(ContainerComponent);
+}
+
+```
+- 使用
+```js
+export default connect(mapStateToProps, null)(LoadOrError(AllCardList));
 ```
