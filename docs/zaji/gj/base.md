@@ -41,3 +41,9 @@ mddir // 生成当前目录的 markdown
 - 永中软件（第三方提供）
 - 操作本地WPS接口，需配合服务器打开写入权限
 
+# Confluence
+文档
+# jenkins
+# jira
+- 禅道
+

@@ -1,4 +1,52 @@
 # 核心实现
+## Api
+- reduce
+```js
+function reduce() {
+  if() {}
+  return callback
+}
+```
+- map
+```js
+```
+- new
+```js
+```
+- call,apply,bind
+```js
+// call
+Function.prototype.myCall = function(ctx) {
+    if(typeof this !== 'function') {
+        throw new TypeError('请传入函数！');
+    }
+    const args = [...arguments].slice(1);
+    // 为当前对象添加函数fn, 值为要调用的函数;
+    ctx.fn = this ;
+    // 执行添加的函数fn
+    const res = ctx.fn(...args);
+    // 执行完后删除
+    delete ctx.fn;
+    return res;
+}
+
+var n = 1;
+var obj = { n: 2 };
+
+function getValue() {
+  console.log(this.n);
+}
+
+getValue.myCall(window) // 1
+getValue.myCall(obj) // 2
+```
+```js
+// apply 第二个参数为数组
+```
+```js
+// bind
+```
+> bind 立即执行；apply,call 调用执行
 ## 节流函数
 ## 防抖函数
 ## 扁平
@@ -24,7 +72,7 @@ export const flattenTree = (data) => {
 ```
 ## 柯里化函数
 - curring 函数
-## compose 函数
+## compose(组成) 函数
 ```js
 function compose(...funcs) {
   return function(...args) {
@@ -52,38 +100,12 @@ Array.prototype.push = function() {}
 ```
 - 函数切片
    - 在函数前加before
-- new
-- call
-```js
-Function.prototype.myCall = function(ctx) {
-    if(typeof this !== 'function') {
-        throw new TypeError('请传入函数！');
-    }
-    const args = [...arguments].slice(1);
-    // 为当前对象添加函数fn, 值为要调用的函数;
-    ctx.fn = this ;
-    // 执行添加的函数fn
-    const res = ctx.fn(...args);
-    // 执行完后删除
-    delete ctx.fn;
-    return res;
-}
 
-var n = 1;
-var obj = { n: 2 };
-
-function getValue() {
-  console.log(this.n);
-}
-
-getValue.myCall(window) // 1
-getValue.myCall(obj) // 2
-```
-- apply
-   - 第二个参数为数组
-- bind
-> bind 立即执行；apply,call 调用执行
 ## promise实现
+```js
+let p = new Promise()
+// 返回的 p 就是一个对象（可叫做promise对象，实例对象）
+```
 > 1).一个promise实例的状态一经确定就不会改变了<br>
 > 2).如果返回的还是一个promise 会`等待(一直等待就相当于中断promise链的下面的then就不会执行了)`这个promise的返回结果
 - resolvePromise函数 的几种情况

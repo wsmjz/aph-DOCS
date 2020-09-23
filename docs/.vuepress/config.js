@@ -145,11 +145,11 @@ module.exports = {
       }]
     },
     {
-      text: '第三方库',
+      text: '待办日程',
       link: '/xcx.md'
     },
     {
-      text: '面试与待办',
+      text: '面试',
       link: '/question/leetco.md'
     },
     {
@@ -391,14 +391,8 @@ module.exports = {
         collapsable: true,
         sidebarDepth: 2,
         children: [
-          'leetco'
-        ]
-      }, {
-        title: '待办事项',
-        collapsable: true,
-        sidebarDepth: 2,
-        children: [
-          'dai'
+          'leetco',
+          'article'
         ]
       }],
       // ['/guoxue.md', '国学'],

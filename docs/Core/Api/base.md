@@ -103,29 +103,6 @@
 ### 其他
 - arguments
 
-## 常用api
-### Math
-   - pardeInt
-### arguments
-- 伪数组，不是一个数组，但是有length，index方法
-- 没有push，pop
-```js
-typeof arguments // 'object'
-// 转化为真数组
-var args = Array.prototype.slice.call(arguments);
-```
-### events 事件对象
-- vue($events)
-- 鼠标
-   - e.pageX()
-   - clientX
-### document对象
-### window对象
-- 屏幕，鼠标
-### Browser对象
-> 不需要定义，创建
-- 全局对象，window
-
 ## 概念解释
 > JavaScript 是一种基于原型的语言 (prototype-based language)，这个和 Java 等基于类的语言不一样。
 
@@ -175,6 +152,32 @@ let obj = {
 - if else elseif 区别
 - if if if 每一个都会执行一遍
 - if else if 执行满足条件的 执行效率更高
+
+
+## 常用api
+### 数组
+`reduce`
+### Math
+   - pardeInt
+### arguments
+- 伪数组，不是一个数组，但是有length，index方法
+- 没有push，pop
+```js
+typeof arguments // 'object'
+// 转化为真数组
+var args = Array.prototype.slice.call(arguments);
+```
+### events 事件对象
+- vue($events)
+- 鼠标
+   - e.pageX()
+   - clientX
+### document对象
+### window对象
+- 屏幕，鼠标
+### Browser对象
+> 不需要定义，创建
+- 全局对象，window
 
 ## number
 - number 特性
