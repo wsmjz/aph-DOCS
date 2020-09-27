@@ -1,5 +1,6 @@
 # vscode 篇
 - 函数上一行 输入`/**`回车，快速生成注释
+- vscode注释插件：koroFileHeader
 ## 插件
 - `Auto Rename Tag` 自动同步修改前后标签名
 - `vscode-icons` 给文件加上图标
@@ -7,6 +8,7 @@
 ### 网站
 #### 学习
 #### 其他
+
 # git 篇
 1. git branch name 创建新分支
 2. git checkout name 切换到新分支
@@ -43,6 +45,15 @@ mddir // 生成当前目录的 markdown
 
 # Confluence
 文档
+- 文档管理
+- KPI数据
+- 团队管理
+- 项目管理
+- 技术管理
+- 产品管理
+- 过程管理
+- 会议纪要
+- 共享文件
 # jenkins
 # jira
 - 禅道

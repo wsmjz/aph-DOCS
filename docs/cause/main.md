@@ -12,6 +12,7 @@
 - 自驱力
 - 自律 坚持 写日记 反思不足
 - 知识架构，结构图，或许可能比知识本身重要
+- 刻意练习 曲线记忆 3-7-15-30
 **成长**
 - 2016
 - 2017
@@ -100,6 +101,9 @@ cordova 有个热推送的插件
 
 
 ## 中医健康养生学（行为维度）
+心，肝，脾，肺，胃
+- 人体先天看肾，后天看脾，[肝](http://www.360doc.com/content/18/0413/22/54220956_745447316.shtml)
+- 心中装的事多，气不足，伤肝
 ### 食物
 - 三七 木耳 清楚血液 肠道毒素
 ### 穴位
@@ -305,11 +309,6 @@ cordova 有个热推送的插件
 - [码灵程序论坛文档地址](https://nav.imaring.com/)
 - [49个不知道的css](https://juejin.im/post/5d3eca78e51d4561cb5dde12#heading-44)
 - [各种文档](https://www.kancloud.cn/)
-   - [Happy Coding待整理](https://qq1037305420.github.io/Blog/)(https://qq1037305420.github.io/Blog/nav.03.webpack/#%E4%BE%9D%E8%B5%96%E5%B7%A5%E5%85%B7webpack-cli)
-   - [清风拂林](https://giserman001.github.io/blogs/miniprogram/)
-   - [静水深流](https://slbyml.github.io/links/)
-      - 算法
-   - [辣椒酱](https://removeif.github.io/)
    - [webpack](https://www.webpackjs.com/concepts/plugins/)
    - [axios文档](https://www.kancloud.cn/yunye/axios/234845)
    - [webpack文档](https://www.kancloud.cn/ywfwj2008/webpack-handbook/84591)
@@ -356,8 +355,42 @@ cordova 有个热推送的插件
 - 前端博客助手
 - 易编课堂
 - 文章整理
-## 网站搜集
+## 网站收集
+### 优秀文档
+- 算法类
+   - [练习方法](https://juejin.im/post/6844903919722692621)
+   - [文章](https://github.com/ConardLi/awesome-coding-js)
+   - [瓶子君进阶算法](https://github.com/sisterAn/JavaScript-Algorithms)
+      - [博客](https://github.com/sisterAn/blog)
+      - [Fiber](https://github.com/sisterAn/blog/issues/34)
+      - [文章](http://www.conardli.top/docs/)
+      - [知识体系](http://www.conardli.top/blog/article/)
+      - [静水](https://slbyml.github.io/links/)
+      - [112](https://www.chavesgu.com/)
+      - [数据结构](http://www.conardli.top/docs/)
+         - 差webpack系列
+- [Happy Coding待整理](https://qq1037305420.github.io/Blog/)(https://qq1037305420.github.io/Blog/nav.03.webpack/#%E4%BE%9D%E8%B5%96%E5%B7%A5%E5%85%B7webpack-cli)
+- [清风拂林](https://giserman001.github.io/blogs/miniprogram/)
+- [静水深流](https://slbyml.github.io/links/)
+   - 算法
+- [辣椒酱](https://removeif.github.io/)
+- [知识整理](https://qishaoxuan.github.io/blog/)
+   - [动态简历](https://github.com/QiShaoXuan/animate_resume)
+   - [效果1](https://epic-spinners.epicmax.co/#/)
+   - [效果2](https://l7.antv.vision/zh/examples/gallery/animate#world)
+- 待整理训练营文档：[地址](http://www.zhufengpeixun.cn/train/)
+- [珠峰文档]
+- 新德汇
+go.js
+   - 基于Vue封装的库https://gitee.com/newgateway/xdh-go
+   - 文档 http://newgateway.gitee.io/xdh-go/
+- [前端大世界](https://cycle263.github.io/articles/tags/)
+- [题库进阶-重要](https://muyiy.cn/question/)
+   - [去github](https://github.com/yygmind/blog)
+- [组件库](https://www.toutiao.com/i6718405521088446988/?timestamp=1564450212&app=news_article&group_id=6718405521088446988&req_id=20190730093011010018026159736CF92)
+- [看得懂的promise知乎](https://juejin.im/post/6844903629187448845?tdsourcetag=s_pctim_aiomsg)
 ### 协同
+- [有道智云]
 - [语雀](https://www.yuque.com/xytech/flutter)
   - [资料](https://www.yuque.com/advanced-frontend)
   - [2](https://www.yuque.com/xytech/flutter)
@@ -365,10 +398,10 @@ cordova 有个热推送的插件
 - 有道
 - [协作画图软件](https://processon.com/) 微信登录
 ### 学习
+
+- [vue知乎](https://www.jianshu.com/p/b1564296a78b)
+    - 关注尤雨溪知乎
 - shouwang.ping@gmail.com
-- [题库进阶-重要](https://muyiy.cn/question/)
-   - [去github](https://github.com/yygmind/blog)
-- [组件库](https://www.toutiao.com/i6718405521088446988/?timestamp=1564450212&app=news_article&group_id=6718405521088446988&req_id=20190730093011010018026159736CF92)
 - 知乎
 - 腾讯课堂
 - 开课吧

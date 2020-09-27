@@ -1,7 +1,4 @@
 # 算法
-- [进阶之路](https://github.com/sisterAn/JavaScript-Algorithms)
-- [博客](https://github.com/sisterAn/blog)
-- [可搜索Fiber原理](https://github.com/sisterAn/blog/issues/34)
    - 这种生命周期会存在一个问题，那就是当更新复杂组件的最上层组件时，调用栈会很长，如果在进行复杂的操作时，就可能长时间阻塞主线程，带来不好的用户体验，Fiber 就是为了解决该问题而生。
    - Fiber 本质上是一个虚拟的堆栈帧，新的调度器会按照优先级自由调度这些帧，从而将之前的同步渲染改成了**异步渲染**，在不影响体验的情况下去**分段计算更新**
 ## 查找
@@ -35,12 +32,6 @@ function binarySearch(data, arr, start, end) {
 
 ## DFS(深度优先)和BFS(广度优先)
 > 时间复杂度和空间复杂度，它们的高低共同决定着一段代码质量的好坏
-- [文章](http://www.conardli.top/docs/)
-- [知识体系](http://www.conardli.top/blog/article/)
-- [静水](https://slbyml.github.io/links/)
-- [112](https://www.chavesgu.com/)
-- [数据结构](http://www.conardli.top/docs/)
-   - 差webpack系列
 ### 深度优先
 与 BFS 不同，更早访问的结点可能不是更靠近根结点的结点。因此，你在DFS 中找到的第一条路径可能不是最短路径。<br>
 在DFS中，结点的处理顺序是完全相反的顺序，就像它们被添加到栈中一样，它是后进先出。所以深度优先搜索一般**使用栈实现**。
