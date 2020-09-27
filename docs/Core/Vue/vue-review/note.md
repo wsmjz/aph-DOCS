@@ -1553,11 +1553,12 @@ export default {
 ## 其他
 - vue的整体架构，用到了那些设计模式，解决了什么问题 
 
-### 作业:
+### 问题:
 
 - 1.双向绑定和 `vuex `是否冲突?
+> 待处理?
 
-- 2.`Vue`中内置组件transition、transition-group 的源码实现原理？
+<!-- - 2.`Vue`中内置组件transition、transition-group 的源码实现原理？
 
 - 3.说说patch函数里做了啥?
 
@@ -1571,7 +1572,7 @@ export default {
 
 - 8.`Vue.set`的原理?
 
-- 9.`vue compile`过程详细说一下，指令、插值表达式等`vue`语法如何生效的?
+- 9.`vue compile`过程详细说一下，指令、插值表达式等`vue`语法如何生效的? -->
 
 
 

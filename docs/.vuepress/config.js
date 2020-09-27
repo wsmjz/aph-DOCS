@@ -160,10 +160,12 @@ module.exports = {
       // ================================================核心
       '/Core/Achieve/': [{
         title: '原理实现',
-        collapsable: false,
+        collapsable: true,
         sidebarDepth: 2,
         children: [
+          'api',
           'base',
+          'promise'
         ]
       }],
       '/Core/Api/': [{
@@ -225,25 +227,27 @@ module.exports = {
         children: [
           'base'
         ]
-      }, {
-        title: '转1',
-        collapsable: true,
-        children: [
-          'note11'
-        ]
-      }, {
-        title: '转2',
-        collapsable: true,
-        children: [
-          'note12'
-        ]
-      }, {
-        title: '转3',
-        collapsable: true,
-        children: [
-          'note13'
-        ]
-      }],
+      }, 
+      // {
+      //   title: '转1',
+      //   collapsable: true,
+      //   children: [
+      //     'note11'
+      //   ]
+      // }, {
+      //   title: '转2',
+      //   collapsable: true,
+      //   children: [
+      //     'note12'
+      //   ]
+      // }, {
+      //   title: '转3',
+      //   collapsable: true,
+      //   children: [
+      //     'note13'
+      //   ]
+      // }
+      ],
       // ================================================生态系统
       '/ecology/dev/': [{
         title: '基础工具',

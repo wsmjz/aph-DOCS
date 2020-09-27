@@ -343,7 +343,6 @@ Vue.mixin({
 ## 六. render函数之JSX应用
 1. 模板缺陷
 2. 函数式组件
-3. 待整理训练营文档：[地址](http://www.zhufengpeixun.cn/train/vue-info/jsx.html#%E4%B8%80-%E6%A8%A1%E6%9D%BF%E7%BC%BA%E9%99%B7)
 
 ## 七. JWT认证
 - JSON Web Token（JWT）是目前最流行的跨域身份验证解决方案

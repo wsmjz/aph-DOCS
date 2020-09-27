@@ -53,12 +53,11 @@ Canvas 更适合绘制图形元素数量非常大（这一般是由数据量大�
 ### jsplumb
 ### mxgraph
 ### go.js
-- 基于Vue封装的库https://gitee.com/newgateway/xdh-go
-- 文档 http://newgateway.gitee.io/xdh-go/
+- xdh
 ### Fabric.js
 > https://spritejs.org/#/
 - 基于canvans的库
 - Fabric.js是一个可以简化Canvas程序编写的库。 Fabric.js为Canvas提供所缺少的对象模型, svg parser, 交互和一整套其他不可或缺的工具
 - Canvas提供一个好的画布能力, 但是Api不够友好。绘制简单图形其实还可以, 不过做一些复杂的图形绘制, 编写一些复杂的效果，就不是那么方便了。Fabric.js就是为此而开发，它主要就是用对象的方式去编写代码
 ## 可视化表单
-- http://newgateway.gitee.io/xdh-form-builder/
+## 可视化三角生成

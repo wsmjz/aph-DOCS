@@ -228,9 +228,7 @@ dragstart($event) { // 解决：需要在拖拽时dragstart事件时给event事�
 ## 其他
 - 易源接口
 - tinyPNG
-- 参考带整理博客
-   - [blog1](https://qishaoxuan.github.io/blog/keng/keng.html)
-   - [中断axios请求](https://blog.csdn.net/itKingOne/article/details/83651004)
+- [中断axios请求](https://blog.csdn.net/itKingOne/article/details/83651004)
 - new URLSearchParams() 与 new FormData()区别
 - 冒泡与捕获
    - [先执行捕获，后冒泡](https://blog.csdn.net/moguzhale/article/details/53503044)
@@ -358,7 +356,7 @@ export function GCJ2GPS(p) {
 }
 ```
 
-## Cordova 混合型app框架  [地址](https://qq1037305420.github.io/Blog/nav.04.cordova/)
+## Cordova 混合型app框架
 - [文档](https://cordova.apache.org/)
 - [原生组件库](https://ionicframework.com/docs/native/overview)
 - Cordova插件封装
