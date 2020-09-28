@@ -14,7 +14,7 @@ features:
 - title: 小店商城
   details: 
 - title: 周易.中学
-  details: 八卦.占卜，奇门遁甲，星象
+  details: 
 - title: 文娱
   details: 历史，音乐，游戏
 footer: 互联网 + 未来
