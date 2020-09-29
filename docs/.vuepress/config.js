@@ -160,7 +160,8 @@ module.exports = {
         title: '基础',
         collapsable: true,
         children: [
-          'base',
+          'obj',
+          'base'
         ]
       }],
       '/Core/Vue/': [{

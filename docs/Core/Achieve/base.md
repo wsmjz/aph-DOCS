@@ -1,4 +1,5 @@
 # 核心
+## class类语法糖
 ## compose(组成) 函数
 ```js
 function compose(...funcs) {
