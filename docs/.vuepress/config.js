@@ -143,18 +143,6 @@ module.exports = {
         text: 'python',
         link: ''
       }]
-    },
-    {
-      text: '待办日程',
-      link: '/xcx.md'
-    },
-    {
-      text: '面试',
-      link: '/question/leetco.md'
-    },
-    {
-      text: '创想',
-      link: '/cause/main.md'
     }],
     sidebar: {
       // ================================================核心
@@ -227,27 +215,7 @@ module.exports = {
         children: [
           'base'
         ]
-      }, 
-      // {
-      //   title: '转1',
-      //   collapsable: true,
-      //   children: [
-      //     'note11'
-      //   ]
-      // }, {
-      //   title: '转2',
-      //   collapsable: true,
-      //   children: [
-      //     'note12'
-      //   ]
-      // }, {
-      //   title: '转3',
-      //   collapsable: true,
-      //   children: [
-      //     'note13'
-      //   ]
-      // }
-      ],
+      }],
       // ================================================生态系统
       '/ecology/dev/': [{
         title: '基础工具',
@@ -380,27 +348,7 @@ module.exports = {
         children: [
           'python'
         ]
-      }],
-      '/cause/': [{
-        title: '创想',
-        collapsable: true,
-        sidebarDepth: 2,
-        children: [
-          'main',
-          'gupiao'
-        ]
-      }],
-      '/question/': [{
-        title: '面试题',
-        collapsable: true,
-        sidebarDepth: 2,
-        children: [
-          'leetco',
-          'article'
-        ]
-      }],
-      // ['/guoxue.md', '国学'],
-      // ['/vue-review/note.md', '解析'],
+      }]
     },
     displayAllHeaders: true,
     lastUpdated: 'Last Updated',
