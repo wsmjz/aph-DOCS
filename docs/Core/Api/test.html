@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Animation(name) {
+        this.name = name
+    }
+    let a = new Animation('王武')
+    // console.dir(Animation)
+    // console.log(a)
+    // console.log(a.constructor === Animation.prototype.constructor )
+
+
+
+    
+    let aa = {
+        age: 20
+    }
+    // console.dir(aa.__proto__  === Object.prototype)
+
+    a.__proto__ = aa
+
+    console.log(a)
+    console.dir(Animation)
+</script>
+</html>
