@@ -269,6 +269,8 @@ function Per() {
    id.appendChild = frame // 塞回文档碎片
 }
 ``` 
+- 讨论
+   1. 原型链主要用于继承，其实就是为了代码复用。因为js算不上是面向对象的语言，继承是`基于原型实现而不是基于类实现的`，所以继承的思想体现的不是特别深
 - 总结
 1. `实例对象.__proto__指针` 等于 `构造函数的prototype` 等于 `原型对象` 
 2. 对象(普通对象，实例对象，原型对象，普通函数，构造函数)就具有__proto__指针
@@ -303,49 +305,6 @@ function Per() {
          }
       }
    ```
-## 函数
-- 箭头函数与普通函数的区别
-```js
-var o = {
-    tex: 'hello',
-    arr: ['join', 'agoh'],
-    fn: function () {
-        return function aa() {
-            console.log(this, 'sdfsdfsdfsd') // window
-        }
-    }
-}
-o.fn()()
-```
-- 变量的查找会依据作用域链由内向外查找直到全局对象window
-```js
-var o = {
-    tex: 'hello',
-    arr: ['join', 'agoh'],
-    fn: function () {
-        return function aa() {
-            console.log(art, 'sdfsdfsdfsd') // 2
-        }
-    }
-}
-var art = 2
-o.fn()()
-```
-- this 谁调用就指代谁，箭头函数本身没有this 向上级作用域查找
-```js
-var o = {
-    tex: 'hello',
-    arr: ['join', 'agoh'],
-    fn: function () {
-        // console.log(this, 'sdfsdfsdfsd')
-        let that = this // o 调用fn 所以this 指代o
-        return function aa() { // that 接受或者这儿改为箭头函数
-            console.log(that, 'sdfsdfsdfsd') 
-        }
-    }
-}
-o.fn()()
-```
 ## EventLoop 事件循环机制
    - 概念：js引擎为主线程
    - 应用
@@ -580,14 +539,3 @@ o.fn()()
 - 浏览器同源策略
 - 九种方式
    - 浏览器非安全模式打开，去除访问限制Lax
-## TypeScript语法
-### 类型注解
-### 接口
-### 类
-- class 继承
-- 解释器 @Component
-- 修饰符
-   - private
-- 断言 !
-- 泛型
-- 接口

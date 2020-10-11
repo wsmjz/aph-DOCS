@@ -1,4 +1,4 @@
-# 文章与备忘录
+# 杂记
 
 ## 正则表达式
 ```js
@@ -215,6 +215,48 @@ dragstart($event) { // 解决：需要在拖拽时dragstart事件时给event事�
 - 移动设备浏览器为了检查用户是否在做双击，默认click事件会大约延迟300毫秒左右 - 解决 Fastclick
 - 元素柯拖拽属性：draggable="true"；事件：onDragstart，onDragenter，onDragend
 - 对象的循环采用Object.keys() , for in 会循环原型链上的
+
+## notes
+1. document.onmouse = null 取消绑定
+> 清空逻辑，让对象的引用地址指向null
+2. if else
+```js
+// 都需要判断执行
+var username;
+var password;
+if (username == "" || username == null) {
+    console.log("用户名为空")
+} 
+if (password == "" || password == null) {
+    console.log("密码为空")
+}
+// 用户名为空
+// 密码为空
+```
+```js
+// 一项成立后，其他不执行 if else
+var username;
+var password;
+if (username == "" || username == null) {
+    console.log("用户名为空")
+} else if (password == "" || password == null) {
+    console.log("密码为空")
+}
+// 用户名为空
+```
+3. 与或运算
+```js
+// && 两个false返回第一个，｜｜ 两个false返回最后一个
+0 && null // 0
+0 || null // null
+```
+```js
+// && 两个false返回第一个，｜｜ 两个false返回最后一个
+0 && null // 0
+0 || null // null
+return (foo || []).length; // 防止报错：返回一个变量的长度，但是我们不知道变量的类型
+return this.state.data || "Fetching Data"; 
+```
 
 ## 书籍
 1. 《红宝书》

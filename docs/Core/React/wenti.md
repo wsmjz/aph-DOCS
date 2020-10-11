@@ -89,3 +89,5 @@ store.dispatch = () => {
 - vue使用Proxy
 - ast语法树描述的只能是Dom属性
 - 虚拟Dom可以加入自定义属性
+- vue2采用的是对data数据的递归监听，数据一改变，自动更新数据=》更新视图<br>
+react 采用的是手动调用setState方法，配合immunite.js做的性能优化

@@ -5,6 +5,14 @@
 - `Auto Rename Tag` 自动同步修改前后标签名
 - `vscode-icons` 给文件加上图标
 - `live server` 本地启服务
+- `css peek`
+- `Beautify`
+- `javaScript(es6) code snippets` 快速键入es6代码片段
+```js
+clg // console.log()
+```
+- `Night Owl` 主题
+- `REST Client` 发送http请求
 ### 网站
 #### 学习
 #### 其他
@@ -57,4 +65,11 @@ mddir // 生成当前目录的 markdown
 # jenkins
 # jira
 - 禅道
+
+# mac
+- 安装cnpm
+```js
+sudo npm install -g cnpm --registry=https://registry.npm.taobao.org --verbose
+// 输入用户开机密码
+```
 

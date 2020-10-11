@@ -208,6 +208,7 @@ module.exports = {
         collapsable: false,
         children: [
           'base',
+          'ts'
         ]
       }],
       '/Core/MyWebpack/': [{

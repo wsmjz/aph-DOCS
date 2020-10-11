@@ -521,8 +521,7 @@ export function compileToFunctions(template) {
 
 ## 4. 创建渲染watcher
 ### 1.初始化渲染Watcher
-- [地址1](http://zhufengpeixun.com/jiagou/vue-analyse/one.html)
-- [地址](http://zhufengpeixun.com/jiagou/)
+
 ## 5. 生命周期
 ## 6. 依赖收集
 ## 7. 异步更新nextTick

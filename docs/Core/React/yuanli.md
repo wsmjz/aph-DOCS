@@ -232,6 +232,8 @@ import { routerMiddleware } from 'react-router-redux';
 ```
 
 ## 多引入
+- export default 只能写一次
+- export 可写多个，导出多个
 ```js
 import getLocale, { getLocaleFolder, antdLans } from 'shared/utils/getLocale';
 ```
@@ -280,7 +282,7 @@ export const antdLans = {
 ```
 
 ## 功能件
-- 可以对这个类做增强
+- 可以对这个类(组件)做增强，使它(自动)具备处理错误的功能
 ```js
 import React from 'react';
 import { connect } from 'react-redux';

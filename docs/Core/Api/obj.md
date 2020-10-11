@@ -165,9 +165,15 @@ var f = a.concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}));
 
 ## 三.函数
 ### 构造函数
+- 构造函数的new都做了些什么？
+    1. JS内部首先会先生成一个空对象；
+    2. 再把函数中的this指向该对象；
+    3. 然后执行构造函数中的语句；
+    4. 最终返回该对象实例。
 - 命名上约定通过首字母大写区分(当然也可以不用大写)
 - 可以通过new创建实例，也就是内部定义了this，有属性赋值(this.name = '')，所以这个实例就有一系列属性了，就像普通对象那样
 - 升级为class(语法糖)
+
 ### 普通函数
 - 写法
 ```js
@@ -176,39 +182,95 @@ var f = a.concat(b.filter(function(v){ return !(a.indexOf(v) > -1)}));
    }
    var test = function () {} // 表达式
 ``` 
-- 分类
+### 分类
 1. 构造函数
-   - 我们先了解一下构造函数的new都做了些什么？简单来说，分为四步：
-      1. JS内部首先会先生成一个空对象；
-      2. 再把函数中的this指向该对象；
-      3. 然后执行构造函数中的语句；
-      4. 最终返回该对象实例。
-2. 自执行函数
-3. 箭头函数
-   - 与普通函数区别
-      - 箭头函数不会创建自己的this（重要！！深入理解！！）
-      - 箭头函数没有原型prototype
-      - 箭头函数的this在定义的时候继承自外层第一个普通函数的this。
-      - 箭头函数继承而来的this指向永远不变（重要！！深入理解！！）, 但可以修改它要继承的对象的this
-      - .call()/.apply()/.bind()无法改变箭头函数中this的指向
-         - .call()/.apply()/.bind()方法可以用来动态修改函数执行时this的指向，但由于箭头函数的this定义时就已经确定且永远不会改变。所以使用这些方法永远也改变不了箭头函数this的指向，虽然这么做代码不会报错
-      - 箭头函数不能作为构造函数使用
-      - 箭头函数没有自己的arguments 箭头函数的this指向全局
-      - 箭头函数的this指向普通函数时,它的argumens继承于该普通函数
-      - 使用new调用箭头函数会报错，因为箭头函数没有constructor
-      - 箭头函数不能用作Generator函数，不能使用yeild关键字
-      - 箭头函数不支持new.target
-      - 如果箭头函数外层没有普通函数，严格模式和非严格模式下它的this都会指向window(全局对象)
-      - 箭头函数不支持重命名函数参数,普通函数的函数参数支持重命名
-      - rest参数获取参数列表
-        ```js
-         let a = (a, ...bcd) => { // rest参数（形式为...变量名） 用于获取函数的多余参数，这样就不需要使用arguments对象了
-            console.log(a, bcd); // 1 [2, 3, 4]
-         };
-         a(1, 2, 3, 4);
-        ```
-   - [更多1](https://www.jianshu.com/p/2e01b9fd210d) [2](https://www.jianshu.com/p/422f7c033f36)
+2. 普通函数 
+3. 匿名函数
+```js
+function () {}
+// 匿名函数赋值给变量
+var test = function () {}
+```
+4. 自执行函数
+```js
+(function() {
 
+})()
+// 应用：创建独立作用域？？
+```
+5. 箭头函数：区别
+    - 箭头函数不会创建自己的this
+    - 箭头函数没有原型prototype
+    - 箭头函数的this在定义的时候**继承自外层第一个普通函数的this**。
+    - 箭头函数继承而来的this指向永远不变！！！, 但可以修改它要继承的对象的this
+    - .call()/.apply()/.bind()无法改变箭头函数中this的指向
+        - .call()/.apply()/.bind()方法可以用来动态修改函数执行时this的指向，但由于箭头函数的this定义时就已经确定且永远不会改变。所以使用这些方法永远也改变不了箭头函数this的指向，虽然这么做代码不会报错
+    - 箭头函数不能作为构造函数使用
+    - 箭头函数没有自己的arguments 箭头函数的this指向全局
+    - 箭头函数的this指向普通函数时,它的argumens继承于该普通函数
+    - 使用new调用箭头函数会报错，因为箭头函数没有constructor
+    - 箭头函数不能用作Generator函数，不能使用yeild关键字
+    - 箭头函数不支持new.target
+    - 如果箭头函数外层没有普通函数，严格模式和非严格模式下它的this都会指向window(全局对象)
+    - 箭头函数不支持重命名函数参数,普通函数的函数参数支持重命名
+    - rest参数获取参数列表（箭头函数和普通函数都可以使用）
+    ```js
+        let a = (a, ...bcd) => { // rest参数（形式为...变量名） 用于获取函数的多余参数，这样就不需要使用arguments对象了
+        console.log(a, bcd); // 1 [2, 3, 4]
+        };
+        a(1, 2, 3, 4);
+    ```
+    - rest参数的用法相对于arguments的优点
+       1. 箭头函数和普通函数都可以使用。
+       2. 更加灵活，接收参数的数量完全自定义。
+       3. rest是一个真正的数组，可以使用数组的API，arguments是一个类数组的对象
+    - 注意：
+        1. 一条语句返回对象字面量，需要加括号，或者直接写成多条语句的return形式
+        2. MDN: 箭头函数的解析顺序相对靠前：虽然箭头函数中的箭头不是运算符，但箭头函数具有与常规函数不同的特殊运算符优先级解析规则
+   - [更多1](https://www.jianshu.com/p/2e01b9fd210d) [2](https://www.jianshu.com/p/422f7c033f36)
+### 参照
+- 箭头函数与普通函数的区别
+```js
+var o = {
+    tex: 'hello',
+    arr: ['join', 'agoh'],
+    fn: function () {
+        return function aa() {
+            console.log(this, 'sdfsdfsdfsd') // window
+        }
+    }
+}
+o.fn()()
+```
+- 变量的查找会依据作用域链由内向外查找直到全局对象window
+```js
+var o = {
+    tex: 'hello',
+    arr: ['join', 'agoh'],
+    fn: function () {
+        return function aa() {
+            console.log(art, 'sdfsdfsdfsd') // 2
+        }
+    }
+}
+var art = 2
+o.fn()()
+```
+- this 谁调用就指代谁，箭头函数本身没有this 向上级作用域查找
+```js
+var o = {
+    tex: 'hello',
+    arr: ['join', 'agoh'],
+    fn: function () {
+        // console.log(this, 'sdfsdfsdfsd')
+        let that = this // o 调用fn 所以this 指代o
+        return function aa() { // that 接受或者这儿改为箭头函数
+            console.log(that, 'sdfsdfsdfsd') 
+        }
+    }
+}
+o.fn()()
+```
 ### 函数节流，防抖
 - 研究underscore, lodash 节流，防抖源码
 - 节流：在几秒时间内 只有一次触发有效
