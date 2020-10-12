@@ -52,6 +52,11 @@ export const flattenTree = (data) => {
 ```
 - 多维转化
 将一个多维数组变为一个一维数组
+```js
+const arr = [1, [2, [3, [4, 5]]], 6];
+const res1 = arr.flat(Infinity);
+const res2 = JSON.stringify(arr).replace(/\[|\]/g, '').split(',');
+```
 1. 使用flat()
 ```js
 const res1 = arr.flat(Infinity);
