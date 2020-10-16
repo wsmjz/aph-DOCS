@@ -28,6 +28,46 @@ Array.prototype.push = function() {}
 ```
 - 函数切片
    - 在函数前加before
+
+## reduce应用
+1. 求最大值/最小值
+```js
+let arr = [1, 2, 3, 4, 5]
+ 
+arr.reduce((prev, cur) => Math.max(prev, cur)); // 5
+arr.reduce((prev, cur) => Math.min(prev, cur)); // 1
+```
+2. 累积
+```js
+arr.reduce((prev, cur) => prev + cur)
+```
+3. 实现map函数
+```js
+let arr = [1, 2, 3]
+Array.prototype._map = function(cb) {
+  if(typeof cb === 'function') {
+    // this: 调用_map方法的当前数组对象
+    let arr = this;
+    return arr.reduce((prev, item, index, array) => {
+      prev.push(cb(item, index, array))
+      return prev
+    }, [])
+  } else {
+    throw new Error(cb + ' is not function')
+  }
+}
+let res = arr._map(n => n*2) console.log(res) // [ 2, 4, 6 ]
+```
+4. 实现filter
+```js
+Array.prototype._filter = function(cb) { if(typeof cb === 'function') { let arr = this; return arr.reduce((prev, item, index, array) => { cb(item, index, array) ? prev.push(item) : null return prev }, []) } else { throw new Error(cb + ' is not function') } }
+
+let res = arr._filter(n => n>2) console.log(res) // [ 3, 4, 5 ]
+```
+5. 实现compose
+6. 数组去重
+7. 数组扁平化
+
 ## 数组扁平化
 - 树结构转化
 ```js
@@ -162,6 +202,13 @@ const unique5 = arr => {
   }
   return res;
 }
+```
+7. reduce
+```js
+let res = arr.reduce((prev, cur)=>{
+  !prev.includes(cur) && prev.push(cur)
+  return prev
+}, [])
 ```
 
 ## 类数组转化为数组
