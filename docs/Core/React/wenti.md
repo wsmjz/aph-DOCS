@@ -81,6 +81,18 @@ store.dispatch = () => {
    - 源码体现
    > 会有一个队列机制<br>
    > 是否批次 `变量isBatchingUpdates = false` 控制同步更新还是异步更新，batchedUpdates函数会修改`isBatchingUpdates = true`
+## 避免将 props 的值复制给 state！这是一个常见的错误：
+```js
+constructor(props) {
+ super(props);
+ // 不要这样做
+ this.state = { color: props.color };
+}
+```
+> 如此做毫无必要（你可以直接使用 this.props.color），同时还产生了 bug（更新 prop 中的 color 时，并不会影响 state）。
+
+只有在你刻意忽略 prop 更新的情况下使用。此时，应将 prop 重命名为 initialColor 或 defaultColor。必要时，你可以修改它的 key，以强制“重置”其内部 state。
+- 自己的弹框组件 需要根据props改变 内部也需要维护state?? - 修改key
 ## 其他
 - PureComponent组件实现
 - 为什么子组件的props就能拿到父组件传递的属性呢

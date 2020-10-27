@@ -6,6 +6,44 @@
    1. 单向数据流
    2. 技能规范要求，限制少，灵活，重原生
    - hooks 可以跨度传值 相当于 provide/inject
+## 目录纲要
+> React.Component<br>
+> 组件更新生命周期：static getDerivedStateFromProps() => shouldComponentUpdate() => render() => getSnapshotBeforeUpdate() => componentDidUpdate()
+### 要点
+- jsx
+- 元素渲染 ReactDOM.render()
+- 组件 & Props
+- State & 生命周期
+- 状态提升
+- 事件处理
+- 条件渲染
+- 列表 & Key
+   - map() 渲染
+- 表单
+- 组合 & 继承
+- 哲学
+### 高级
+- Context
+   - 共享数据
+- Refs
+- Fragments
+- 错误边界
+- 高阶组件
+- 性能优化
+- Hook
+
+### APi(少)
+- React.Component
+   - 生命周期
+   - 实例属性
+   - class 属性
+   - 其他 APIs
+      - setState()
+      - forceUpdate()
+- ReactDOM.render() 等
+- 其他合成事件，Dom元素写法
+
+
 ## jsx
 - DOM元素会经过bable编译([解释器](https://www.babeljs.cn/repl))，再经过react提供的createElement方法转化成react元素
 ## 属性
@@ -14,7 +52,16 @@
 - 状态提升，共享数据，每个组件内部使用的state，改为props传入
 - setState方法实现 =》状态对象不是覆盖 合并 {...state, ...privi}
 - 渲染是一个独立行为，props、state在单次渲染中保持不变，即使是渲染中的异步函数调用使用的也是本次渲染的count值；这就解释了为什么我们需要使用setState方法更新state而非直接修改，它能确保在单次渲染中state不受污染。
-## 组件
+
+## 通信
+   1. 回调函数
+   2. redux-react
+      - Provid
+
+## 组件React.Component
+> render() 方法是 class 组件中唯一必须实现的方法
+> render() 函数应该为纯函数，这意味着在不修改组件 state 的情况下，每次调用时都返回相同的结果，并且**它不会直接与浏览器交互**
+> 如需与浏览器进行交互，请在 componentDidMount() 或其他生命周期方法中执行你的操作
 - 函数组件
    - 实例难以销毁，影响性能
    - 自身有状态
@@ -28,6 +75,16 @@
   - 组件组合
 - refs
 - 组件组合，嵌套，插槽
+### 分类
+- 函数式组件
+   - 纯函数 不会改变入参
+   - 非纯函数
+- Class 类组件
+- 有状态组件
+- 无状态组件
+- 受控组件
+   - 渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。被 React 以这种方式控制取值的表单输入元素就叫做“受控组件”。
+- 高阶组件
 ### 高阶组件
 ```js
 // 插槽
@@ -35,30 +92,93 @@
 {props.children}
 {props.left}  
 ```
-## 重要掌握
-- Context
-   - 共享数据
-- Refs
+### 生命周期
+> 常用的，不常用的，过时的
+- 见下
+### class属性
+- defaultProps
+defaultProps 可以为 Class 组件添加默认 props。这一般用于 props 未赋值，但又不能为 null 的情况。例如
+```js
+class CustomButton extends React.Component {
+  // ...
+}
 
-- React class 组件的详细 API
-> React.Component<br>
-> 组件更新生命周期：static getDerivedStateFromProps() => shouldComponentUpdate() => render() => getSnapshotBeforeUpdate() => componentDidUpdate()
-   - constructor()
-   - static getDerivedStateFromProps()
-   - render()
-   - componentDidMount()
-   - componentWillUnmount() // 卸载
-   - static getDerivedStateFromError() // 错误处理
-   - componentDidCatch()
-   - setState()
-   - forceUpdate()
-   - class 属性
-      - defaultProps
-      - displayName
-   - 实例属性
-      - props
-      - state
+CustomButton.defaultProps = {
+  color: 'blue'
+};
+render() {
+    return <CustomButton /> ; // props.color 将设置为 'blue'
+  }
+```
+- displayName
+### 实例属性
+- props
+- state
+### 其他Api
+> 手动调用
+- setState()
+   - 数据更新是为同步，视图渲染为异步
+- forceUpdate()
+> 默认情况下，当组件的 state 或 props 发生变化时，组件将重新渲染。如果 render() 方法依赖于其他数据，则可以调用 forceUpdate() 强制让组件重新渲染。
+> 调用 forceUpdate() 将致使组件调用 render() 方法
+> 通常你应该避免使用 forceUpdate()，尽量在 render() 中使用 this.props 和 this.state
 
+## 生命周期
+> React 主动调用
+### 挂载
+当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下：
+- constructor()
+- static getDerivedStateFromProps()
+- render()
+- componentDidMount()
+### 更新
+当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：
+- static getDerivedStateFromProps()
+- shouldComponentUpdate()
+- render()
+- getSnapshotBeforeUpdate()
+- componentDidUpdate()
+### 卸载
+当组件从 DOM 中移除时会调用如下方法：
+- componentWillUnmount()
+> 在此方法中执行必要的清理操作，例如，清除 timer，取消网络请求或清除在 componentDidMount() 中创建的订阅等
+### 错误处理
+当渲染过程，生命周期，或子组件的构造函数中抛出错误时，会调用如下方法：
+- static getDerivedStateFromError()
+- componentDidCatch()
+
+## ReactDOM
+可以把这些方法用于 React 模型以外的地方
+### render()
+```js
+import ReactDOM from 'react-dom';
+ReactDOM.render(
+  <Provider store={store}>
+      <App />
+  </Provider>,
+  document.getElementById('root')
+);
+```
+### hydrate()
+ReactDOM.hydrate(element, container[, callback])
+## DOM元素
+React 实现了一套独立于浏览器的 DOM 系统，兼顾了性能和跨浏览器的兼容性
+- 在 React 中，所有的 DOM 特性和属性（包括事件处理）都应该是小驼峰命名的方式。例如，与 HTML 中的 tabindex 属性对应的 React 的属性是 tabIndex
+    - onclick -> onClick
+### 属性差异
+React中**自己实现的用法**与原生Html中的用法存在差异
+- checked
+- className
+- onChange
+   - onChange 事件与预期行为一致：每当表单字段变化时，该事件都会被触发。我们故意没有使用浏览器已有的默认行为，是因为 onChange 在浏览器中的行为和名称不对应，并且 React 依靠了该事件实时处理用户输入
+## 合成事件
+事件处理
+- React 事件的命名采用小驼峰式（camelCase），而不是纯小写
+   - onclick -> onClick
+## ReactDOMServer
+ReactDOMServer 对象允许你将组件渲染成静态标记。通常，它被使用在 Node 服务端上
+## 性能优化
+- React.Fragment 空标签 <>: 语法糖
 
 
 ## 讨论
@@ -68,8 +188,7 @@
 - js es6 中 class 的方法默认不会绑定 this 所以需要手动call 绑定this
 - 这其实与 JavaScript 函数工作原理有关。通常情况下，如果你没有在方法后面添加 ()，例如 onClick={this.handleClick}，你应该为这个方法绑定 this
 - react的上层开发者要更多一些
-## sdf
-- 满足域内域外 的研发发布体系
+- 满足域内域外 的研发发布体系(客如云)
 - 可配置表单
 ## hooks(钩子)
 - 解决类组件实例难以销毁的性能问题，让函数组件也具备了自身状态
@@ -185,28 +304,6 @@ function FriendListItem(props) {
 ```
 这些组件的状态是完全独立的。钩子是重用有状态逻辑的一种方式，而不是状态本身。 事实上，每次调用Hook都有一个完全隔离的状态 - 所以你甚至可以在一个组件中使用相同的自定义Hook两次。
 `custom hook`更像是一种约定而非功能。如果函数的名称以use开头并且它调用其他Hook，我们说它是一个Custom Hook。useSomething命名约定是linter插件如何使用Hooks在代码中查找错误的
-## 构建项目
-## 基础起步
-- 组件 & props
-   - 函数式组件
-      - 纯函数 不会改变入参
-      - 非纯函数
-   - Class 类组件
-   - 有状态组件
-   - 无状态组件
-   - 受控组件
-      - 渲染表单的 React 组件还控制着用户输入过程中表单发生的操作。被 React 以这种方式控制取值的表单输入元素就叫做“受控组件”。
-
-## 通信
-   1. 回调函数
-   2. redux-react
-      - Provid
-
-## setState()
-数据更新是为同步，视图渲染为异步
-
-## 性能优化
-- React.Fragment 空标签 <>: 语法糖
 
 
 ## 注意项
