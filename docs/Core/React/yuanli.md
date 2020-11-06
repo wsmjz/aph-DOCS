@@ -84,6 +84,10 @@ b.m // undefined
 这里需要注意，由于`super指向父类的原型对象`，所以定义在父类实例上的方法或属性，是无法通过super调用的。
 上面代码中，p是父类A实例的属性，super.p就引用不到它
 ```
+## React.createElement
+- bable 将 render div 转译为React.createElement
+- 返回虚拟Dom
+   - 同于vue 的render函数`_c,_v,_s`
 ## redux
 - 40：10
 - combineReducers

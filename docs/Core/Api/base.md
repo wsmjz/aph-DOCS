@@ -1,7 +1,12 @@
 
 # 应用
 
+## 执行环境栈ECS
+- 函数执行会生成一个push进数组，执行完后销毁pop, 栈型结构先进后出，后进先出
+## 作用域链
+> [[scope]] 属性, 链
 ## 原型链
+> __prot__ 链
 > JavaScript 是一种基于原型的语言 (prototype-based language)，这个和 Java 等基于类的语言不一样。
 
 - [原型链](https://www.cnblogs.com/dengyao-blogs/p/11481326.html)
@@ -53,6 +58,7 @@ let obj = {
 
 
 ## 常用api
+- switch case 
 ### 数组
 `reduce`
 ### Math

@@ -81,6 +81,7 @@ store.dispatch = () => {
    - 源码体现
    > 会有一个队列机制<br>
    > 是否批次 `变量isBatchingUpdates = false` 控制同步更新还是异步更新，batchedUpdates函数会修改`isBatchingUpdates = true`
+- 多次调用会有一个队列机制，最后更新
 ## 避免将 props 的值复制给 state！这是一个常见的错误：
 ```js
 constructor(props) {

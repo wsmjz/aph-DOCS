@@ -1,11 +1,29 @@
 # React
+**对比Vue学习**
+核心：**组件，状态，属性，jsx，生命周期**
+- 平台
+   - react-dom：web
+   - react-native：app
 `属性`, `状态提升`，`setState`,`事件机制`，`错误边界`，`Content`，`代码分割`
 > 组件，属性，状态，生命周期，路由，Store，Hooks, 顶层Dom方法，事件，中间件<br>
 > react和vue 解决的都是视图层的问题，也就是封装了dom操作的api, 数据绑定， 用虚拟dom比对做了Dom更新的性能优化，之后浏览器如果直接解决了这个问题，也就不需要这框架了
+- vue 的render函数，react通过bable（babel:presets:react-app）转化成React.createElement函数 =》 然后都是转化成虚拟dom再做diff比对，其实这两个都是做的这个底层dom的操作，双向，单向绑定数据与视图；然后vue 是向上封装了更多的api；也是方便开发者，也是限制了开发者需按照作者的更多约定去开发; **jsx语法可以防止网络安全漏洞攻击**
 - 特点
    1. 单向数据流
    2. 技能规范要求，限制少，灵活，重原生
    - hooks 可以跨度传值 相当于 provide/inject
+   - 事件是通过事件委托的方式来绑定的 document
+   - 唯一ID的作用
+      - 做事件委托
+   - diff 是通过key来做的
+## 基础
+- react 单向 数据可以改视图。视图改数据得手动：合成事件-onClick:setstate
+- 一个根节点，可以为空
+- 花括号中必须是jsx表达式（有返回值），里面不能写if，可以是基本类型（直接写字符串，null,undefind代表空元素），数组；不能是对象
+- 但是style需要写成对象，或虚拟dom; div style={{color:red}}
+- className
+- map循环，有返回值，key唯一值，不写index？？原因
+- vue 模版有缺陷，用jsx语法，不如直接用react，jsx语法非常具有编程性，比如这儿逻辑我就想渲染一个UI视图
 ## 目录纲要
 > React.Component<br>
 > 组件更新生命周期：static getDerivedStateFromProps() => shouldComponentUpdate() => render() => getSnapshotBeforeUpdate() => componentDidUpdate()
@@ -93,6 +111,7 @@
 {props.left}  
 ```
 ### 生命周期
+- 当改变state时触发componentWillUpdate，render，componentDidUpdate函数，其他的函数都只是调用一次
 > 常用的，不常用的，过时的
 - 见下
 ### class属性
