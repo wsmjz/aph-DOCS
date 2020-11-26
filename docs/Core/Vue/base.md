@@ -65,6 +65,7 @@ Vue.prototype.$axios = ajax // 在其原型上添加方法
 - 源码核心
    - patch
 ## 讨论
+- 从历史上看，库和框架都专注于让它们的工作表现得更出色，但框架的要求和提供的能力更全面详尽，而库则更少更轻量
 - 你只需要明白所有的 Vue 组件都是 Vue 实例，并且接受相同的选项对象 (一些根实例特有的选项除外）
 - vue组件系统就是实例树
 - 每个组件都会各自独立维护它的 count。因为你每用一次组件，就会有一个它的新实例被创建。
@@ -453,6 +454,13 @@ created - 父
 created - 子
 mounted - 子
 mounted - 父
+```
+```js
+// react
+componentWillMount - 父
+componentWillMount - 子
+componentDidMount - 子
+componentDidMount - 父
 ```
 ## 监听数组变化
 ```js

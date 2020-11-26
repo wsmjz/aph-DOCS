@@ -3,6 +3,19 @@
 - 算法 排序，搜索算法提高js代码执行效率
 - 函数式编程来优化代码结构
 - 函数节流，防抖
+- if语句简化
+```js
+if(value === 'duck' || value === 'dog' || value === 'cat') {
+  // ...
+}
+const options = ['duck', 'dog', 'cat'];
+if (options.includes(value)) {
+  // ...
+}
+```
+- 解构赋值
+- 命名
+- 代码风格（比如几个空格）
 ## 合理规划html代码结构
 ## css优化
 - 渲染原理：
