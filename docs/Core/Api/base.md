@@ -50,6 +50,29 @@ let obj = {
 "name11" in obj // false
 ```
 - es6 的改进处理
+## 深拷贝与浅拷贝
+> 浅拷贝：一种是把一个对象里面的所有的属性值和方法都复制给另一个对象，另一种是直接把一个对象赋给另一个对象，使得两个都指向同一个对象 
+> 浅拷贝修改某一个的值，另外一个也会改变；深拷贝的两个变量则是独立的，会开辟新的存储空间
+
+### 浅拷贝
+1. 直接赋值
+```js
+let a = {}
+b = a
+```
+2. 把对象中的属性全部取出来赋值到另一个对象
+3. Object.assign()
+4. Array.prototype.concat()
+5. Array.prototype.slice()
+
+### 深拷贝
+> 几种方法的差异，缺点不足
+1. JSON.parse(JSON.stringify())
+   - 可以实现数组和对象和基本数据类型的深拷贝，但不能处理函数。因为JSON.stringify()方法是将一个javascript值转换我一个JSON字符串，不能接受函数
+2. 自己递归实现
+3. lodash
+   - _.cloneDeep
+
 ## 判断
 - 'x' in obj  判断x属性是否存在obj对象中
 - if else elseif 区别
@@ -98,17 +121,27 @@ while(num < 10) { // 执行条件，不确定循环次数，只要条件满足�
 
 }
 ```
-2. `for() i++ for in/of` 遍历对象 会遍历`原型链`
 2. for() i++ for in/of
+> 遍历对象 会遍历`原型链`
+- for ++ 
 - for in 适用于对象 会遍历所有课枚举属性
 - for of 适用于数组
 
 3. forEach()
 4. map()
+5. Obiect.keys()
 ## 模块化规范
    1. commonJs - require()
+```js
+// 用在写服务端  node率先使用
+require()
+```
    2. seaJs - requireJs - define()
    3. es6
+```js
+import
+export
+```
    4. AMD
    5. CMD
 ## 路由
@@ -285,7 +318,22 @@ axios.post('url', {
   ID: 12345
 }).then((response) => {})
 ```
-## 易忘点
+## 注意
+- with() 的使用
+> vue2 解析ast语法树 生成代码的时候有使用
+```js
+let obj = {
+  a: 1,
+  b: 2,
+  c: 3
+}
+with(obj) {
+  a,
+  b,
+  c
+}
+```
+- ++i 与 i++
 
 ### 其他
 - e.currentTarget

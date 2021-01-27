@@ -133,6 +133,11 @@ npm install --production
    - npm publish
    - npm发布作用域包 私有包
 
+- 发布命名空间包
+```js
+npm publish --access public  
+```
+
 ## Buffer应用
 
 ## fs应用及流

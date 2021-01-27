@@ -93,6 +93,7 @@ Function.prototype.apply = function(context = window, args) {
   return res;
 }
 ```
+> call 与 bind 是apply的语法糖，里面包装了apply()
 ## Function.prototype.call
 ```js
 Function.prototype.call = function(context = window, ...args) {
