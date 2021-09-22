@@ -18,10 +18,4 @@ deploy:
     github_token: $GITHUB_TOKEN
     local_dir: docs
     on:
-      branch: master 
-  - provider: npm
-    email: 1025658085@qq.com  
-    api_key: "$NPM_TOKEN"
-    skip_cleanup: true
-    on:
       branch: master
