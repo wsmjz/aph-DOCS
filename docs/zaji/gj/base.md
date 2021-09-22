@@ -24,10 +24,25 @@ clg // console.log()
 4. git push --set-upstream origin name 推送到某个分支
 5. 丢弃当前内容
 
+- 其他
+
+```sh
+   git stash
+   git stash pop
+   git rebase 多人合作
+   git flow
+   git base
+   git gui
+   (commitlint / husy / husky)
+```
+
+
 - 第一次链接远程仓库需使用 `git push -u origin master` 之后可以直接`git push`
 - 合并分支流程
    - git add .
 - `git push -u origin name` 与 `git push --set-upstream origin name`
+
+
 # vuepress 篇
 - 文本后面必须空一行 跟全局组件
 - 若要跳转新一页面，需新建一个文件夹，即一个文件夹代表一页，里面的每一个`.md文件`则表示一页中的一大类别

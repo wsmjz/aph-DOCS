@@ -1,5 +1,15 @@
 # 常见问题
 
+## antd 问题
+- Q: 表格 分页记住所有选中项 ；A:采用二维数组 每一项记录每一页的数据
+- Q:注意Model 关闭不会销毁，对表单默认值(初始渲染一次)有影响；A: 可设置Model销毁属性 或 手动 true?Model:null
+- 注意销毁 全局变量 
+- 表单布局，两列，一列，注意清楚padding, 避免百分比错位计算
+- 注意 updateKey 组件 
+   - 录制中心 循环输入框 不能加key
+- colmuns 增加配置 复合搜索 （注意protable 提供的配置自定义搜索）
+- 注意 Upload 的自定义上传 customRequest
+
 ## 区别
 > 1. 设计思想不同：vue追求的是开发的简单，而react更在乎方式是否正确,合理<br>
 > 2. 对数据的感知不同：vue(Know)双向this.a = 0, react(Do not Know)单向this.setState({a: 0})<br>
@@ -75,6 +85,11 @@ store.dispatch = () => {
 ```
 - 日志中间件
 - 错误中间件
+
+## useEffect 是浅比较吗
+> 是的，react很多功能应用一般都是浅比较，需要根据开发者能力自行做优化
+- 如何实现 深比较？？
+
 ## setState 是同步的还是异步的
 - 放入setTimeout中会 同步执行
 - 直接调用会有一个队列机制 异步执行
@@ -96,11 +111,122 @@ constructor(props) {
 - 自己的弹框组件 需要根据props改变 内部也需要维护state?? - 修改key
 ## 其他
 - PureComponent组件实现
-- 为什么子组件的props就能拿到父组件传递的属性呢
+- 为什么子组件的props就能拿到父组件传递的属性呢？？
+> bable 会解析jsx上传递的属性值
+- 不能用math. key 不一样
+- 新生命周期？？
+- immunetable？？
+   - 解释： https://cloud.tencent.com/developer/section/1374219
+- usedispatch redux中
+- uselayouteffect  在redux中取消订阅
+## 理解fiber架构
+- 是链表结构
+- 虚拟dom ==> fiber ==> dom
+   - 如何从虚拟dom构建fiber？？ 源码-fiber树
+- 会有一个fiberRoot 每次更新 都是从root开始更新
+- fiber调和 中断 优化，是为了中断，恢复（可以出循环）；不是高效（新创建了这么多东西并不（只）是为了高效， 但是为什么又要这么去做，是有一个整体架构的平衡，取舍） 
+- setState 都是从根节点开始调度 31个赛道优先级
+- 赛道 跟优先级不一样；有对应关系
+- 调度，调和是一个东西吗？
+- fiber优先级怎么提现的
+- 你比如要讲解源码，应该讲解useState是如何顺序的，diff内部实现，用了啥设计模式，用web worker处理diff大量计算，优化了啥
+- 异步 批量更新？？
+- 初次渲染 非批量更新？？
+
+## 为什么会出现hooks
+- 解决了什么问题？？
+- 设计初衷（要去理解一个新事物，新技术的初衷，解决了什么问题）
+
+## useState,useEffect等hooks架构，构建流程
+
+## react组件的几种复用方式以及各自的优缺点？？
+- HOC高阶组件
+- 继承
+
+## 为什么需要react-redux:
+ 一个组件如果想从store存取公用状态，需要进行四步操作：import引入store、getState获取状态、dispatch修改状态、subscribe订阅更新，代码相对冗余,我们想要合并一些重复的操作，而react-redux就提供了一种合并操作的方案
+react-redux提供Provider和connect两个API，Provider将store放进this.context里，省去了import这一步，connect将getState、dispatch合并进了this.props，并自动订阅更新
+- 还有connect，使用装饰器模式实现，所谓装饰器模式，简单地说就是对类的一个包装，动态地拓展类的功能。connect以及React中的高阶组件都是这一模式的实现
+
 ## 与vue的性能对比优化
 - react改进了fibe, 分片渲染Dom
 - vue使用Proxy
+- vue  new一个实例 原型上的东西都有（感觉初次加载会耗费很多性能， 但是自我认识，感觉随着现在硬件技术性能的提升，而后软件的性能消耗可以忽略一些）
 - ast语法树描述的只能是Dom属性
 - 虚拟Dom可以加入自定义属性
 - vue2采用的是对data数据的递归监听，数据一改变，自动更新数据=》更新视图<br>
 react 采用的是手动调用setState方法，配合immunite.js做的性能优化
+- react 外国人追求自由, vue国人追求中庸（但是在diff算法上，vue是尽可能的追求极致速度， 而react却并没有那么快，做了一个fiber调和）
+- Vue3中新增的setup()，会在beforeCreate之后，created之前执行。选项d：React中虚拟DOM的diff算法复杂度是O(n³)。这两个选项是不正确的。Vue3中新增的setup()函数代替了2.x版本的beforeCreate、created()函数，它会在beforeCreate之前执行。React中虚拟DOM的diff算法复杂度是O(n)。
+- setState用来修改组件状态，此过程是异步的。这个选项是不正确的。目前在事前处理内部的setState才是异步的。
+- react 是库，vue是框架，这是本质的区别
+
+## 讨论
+- vue3 保留了自己模板的特点  setup 综合了react的自由
+- 面向开发者不友好 可以做一些封装
+- 见仁见智：视图与逻辑本身也是人为的分离，如果不是特别，某些要求，当然这种分离也更符合大众的审美观念
+- 解决部署过后的缓存问题
+   - 样式文件加 随机字符串
+- 登陆后，跳转到之前的历史纪录页面
+- swagger 生成客户端ts请求
+- webpack 中配置别名，路径，可引入自己的本地文件，去覆盖node_modules里面的文件
+
+## 待迁移
+- 架构师素质：成长计划 时间管理 项目管理
+- 做一个电子签名插件
+- 有没有大佬用过avue-form-design这个表单拖拽插件的
+- vite项目
+> https://github.com/xuya227939/tristana
+- fetch不支持 中断，上传网络进度监听, 不支持取消
+- 并发 并行的区别
+- Commons  es6理解个模块化方案历史
+- 前端知识每日：http://www.h-camel.com/api.html
+- vue -ui 框架
+   - http://iview.talkingdata.com/#/components/guide/install
+- 按图索骥的学习
+   - 把知识点构建成一棵树，要学会触类旁通
+- openlayer geoserver
+- https://cycle263.github.io/articles/tags/
+- https://slbyml.github.io/links/
+- http://obkoro1.com/web_accumulate/
+- 面试要点脑图：https://www.processon.com/view/link/5f70467ce0b34d327932fd90
+- 插件就是给一个会自动执行的回调函数
+- 有条不紊的学习，切不可操之过急
+- 算法 网络协议不会过时
+- 指令 解析器
+- 兵器-vue 秘籍-算法 内力-
+- 养成学习习惯， 习惯的力量学习，要持续学习，学习方法论，资源整理，核心原理理解
+- 简历  成长了什么…
+- 断电续传
+   - 并发6次，6个同时请求
+   - TCP慢启动
+   - 包大小匹配切片大小
+- 不用sort 排出前面3个
+- 编译 优化好 交给浏览器；；；编译原理写 webpack 插件
+- 自己认识的自己 别人眼中的自己 想成为的自己
+- 单向 双向 数据流 对比 是否重新赋值；；返回新值
+- 兴趣 坚持 好好对待
+- 大屏：https://github.com/chellel/dashboard-project
+- 人的身体 精神 意志健康
+- 刻意练习  动态规划
+- 成功的人不是赢在起点，而是赢在转折点
+- 人生或是通达，或是愚钝 最幸福，活得大头大脑，不用想太多
+- 通透 ，快乐付出，不要奢求别人，去包容，去理解周围，可控范围内
+- 真正的自由是你不在以别人对待你的方式  来判断自己的价值
+- 成熟在于 正视别人的不足 能去包容，接受世界的态度；不要去品论别人，可以说建议-
+- 我们每个人从一出生就知道了终点，结果， 人生（事情）重要的是享受过程，精神，肉体体验
+- 在社会上游走打拼，如果没有足够的能力洞悉和防备，很容易掉入陷阱
+- 野心要和能力匹配。贵有自知之明
+- 我们应该去放大自己的长处，而不是去弥补短处 -- 任正非（做专业的事，自己天赋的事） 时光匆匆，活在当下，做有兴趣的事，做热爱。擅长，有价值的
+- 努力才能谈公平，绝对自律才是绝对自由
+- 温柔岁月 安静善意美好的看待周围  细细品尝
+- 通达 看透事物名利 不焦不燥 不说透
+- 快乐，健康，真心，感情；最重要
+- 社会太浮躁，信息量太多，要学会清净信息，清净自己，学会信息的取舍
+- 本着哲学论的方式去看待，学习事物（没有绝对的好与坏），或很纠结，或也很清澈
+- typeScript 上的应用 vue不方便
+- https://slbyml.github.io/links/
+- http://obkoro1.com/web_accumulate/
+- https://giserman001.github.io/blogs/miniprogram/
+- https://qq1037305420.github.io/Blog/
+- https://giserman001.github.io/blogs/article/strategy/T_vue-plugin.html

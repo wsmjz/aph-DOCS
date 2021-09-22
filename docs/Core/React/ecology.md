@@ -2,6 +2,8 @@
 ## umiJs
 - 解决方案
 ## hooks
+- 为什么hooks 只能在顶层调用？？
+   - 因为：内部是使用数组存储的每个state的值，获取也是通过index索引来获取对应的state的值的， 如果在if中有条件才调用某个state的话，就会引起索引混乱，取不到对应的state的值
 ## react-router-dom
 > react 应用在浏览器（dom）上的路由
 ## redux-immutable

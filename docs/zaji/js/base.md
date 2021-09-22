@@ -398,6 +398,9 @@ export function GCJ2GPS(p) {
 }
 ```
 
+## 详细get,post,put 区别
+- 缓存
+
 ## Cordova 混合型app框架
 - [文档](https://cordova.apache.org/)
 - [原生组件库](https://ionicframework.com/docs/native/overview)
