@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "applehome-ui": "^1.2.9",
-    "core-js": "^2.6.11",
+    "core-js": "^2.6.12",
     "element-ui": "^2.13.1",
     "highlight.js": "^10.0.3",
     "node-sass": "^4.14.1",
@@ -21,7 +21,7 @@
     "vuepress": "^1.5.2"
   },
   "devDependencies": {
-    "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack": "^4.46.0",
+    "webpack-dev-server": "^3.11.3"
   }
 }

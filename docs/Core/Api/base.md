@@ -485,3 +485,10 @@ flatData(data) {
    - 编码格式：application/x-www-form-urlencode 和 multipart/form-data ==> axios会把请求的数据转换成json格式，即为：application/json;charset=UTF-8  看后端接受方式 需改变编码格式传输
    - transformRequest 对data进行任意转换处理
    pm2命令
+
+## JSON.stringify, log的剩余参数
+```js
+console.dir 打印详情
+console.log('1', '2')
+JSON.stringify('', '')
+```

@@ -1,5 +1,5 @@
 module.exports = {
-  title: '苹果家+',
+  title: '工作笔记',
   // description: '沉于当下，面向未来，内容杂道九宗，望之issue',
   description: '汇聚百川，终成江河',
   port: 65533,
@@ -108,6 +108,10 @@ module.exports = {
       }]
     },
     {
+      text: '工程化',
+      link: '/project/intr'
+    },
+    {
       text: '性能优化',
       link: '/xingneng/base.md'
     },
@@ -146,6 +150,17 @@ module.exports = {
     }],
     sidebar: {
       // ================================================核心
+      '/project/': [{
+        title: '工程化',
+        collapsable: false,
+        children: [
+          'intr',
+          'webpack',
+          'rollup',
+          'vite',
+          'gulp'
+        ]
+      }],
       '/Core/Achieve/': [{
         title: '原理实现',
         collapsable: true,
@@ -166,21 +181,16 @@ module.exports = {
       }],
       '/Core/Vue/': [{
         title: 'vue概记',
-        collapsable: true,
+        collapsable: false,
         children: [
-          'base'
+          'base',
+          'yuanli'
         ]
       }, {
         title: '常见问题',
         collapsable: true,
         children: [
           'vue-review/note'
-        ]
-      }, {
-        title: '源码认识',
-        collapsable: true,
-        children: [
-          'yuanli'
         ]
       }],
       '/Core/React/': [{
