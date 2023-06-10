@@ -2,17 +2,35 @@
 - 函数上一行 输入`/**`回车，快速生成注释
 - vscode注释插件：koroFileHeader
 ## 插件
+- `飞冰插件`
+- `每日一题`
+- `sailfish 插件`
+- `chinese中文`
 - `Auto Rename Tag` 自动同步修改前后标签名
+- `eslint`
 - `vscode-icons` 给文件加上图标
 - `live server` 本地启服务
 - `css peek`
 - `Beautify`
 - `javaScript(es6) code snippets` 快速键入es6代码片段
+- `GitLens`
+- `git history` git历史记录
+- `auto close tag`
+- `any-rule`
+- `code runner` 运行node
+- `image preview` 预览图片
+- `color Highlight` `vscode-pigments` 预览色值
+- `Tabnine` 提示将要写的代码
+- `svg preview` 编辑svg
+- `code spell checker` 检查单词拼写错误
+- git
 ```js
 clg // console.log()
 ```
 - `Night Owl` 主题
 - `REST Client` 发送http请求
+### 工具包
+- nodeman
 ### 网站
 #### 学习
 #### 其他
