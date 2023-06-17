@@ -690,3 +690,8 @@ dependencies {
 ## 注意
 
 - Object.keys 的排序规则
+
+## home安装地址
+```js
+ -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh
+```
