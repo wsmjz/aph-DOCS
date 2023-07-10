@@ -323,3 +323,9 @@ export default function LoadingOrError(InComponent, needLogin = true, showError 
 ```js
 export default connect(mapStateToProps, null)(LoadOrError(AllCardList));
 ```
+
+## 双向循环链表
+- 构建fiber
+
+## 单向链表
+- hooks 应用

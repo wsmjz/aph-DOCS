@@ -59,6 +59,7 @@ clg // console.log()
 - 合并分支流程
    - git add .
 - `git push -u origin name` 与 `git push --set-upstream origin name`
+- git config user.name
 
 
 # vuepress 篇

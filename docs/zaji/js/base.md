@@ -691,7 +691,45 @@ dependencies {
 
 - Object.keys 的排序规则
 
-## home安装地址
+## homebrew安装地址
 ```js
  -fsSL https://gitee.com/ineo6/homebrew-install/raw/master/install.sh
+ // 安装fnm
+ brew install fnm
 ```
+
+## switch case 未阻断
+在 JavaScript 中，switch 语句和 case 语句用于多条件判断。在每个 case 语句后面一般会使用 return 语句返回一个值，来结束整个 switch 语句的执行。但是，即使在某个 case 语句中使用了 return 语句返回值，整个 switch 语句可能仍然会继续执行。这取决于 switch 语句后面是否有其他可执行的语句
+
+## 使用useModal 加类型
+```js
+const { state, toggle } = useModel<boolean>(false);
+```
+
+## 面试问题
+- useEffect 怎么使依赖项同时变化的时候才触发
+- 浏览器两个tab的session 会共存吗
+- 远程组件是以什么规范打包的 打包后是什么格式
+- server层会打包吗
+- fiber 为什么不使用setTimeout
+在 React 中，Fiber 不使用 setTimeout，而是使用浏览器原生的 requestIdleCallback API 来实现异步任务调度。这是因为 requestIdleCallback 可以更好地控制任务的执行时间和优先级。
+
+setTimeout 无法掌控任务的优先级和时长，可能导致任务执行时间超时，从而影响用户体验。而 requestIdleCallback 则可以通过给定的回调函数来检测当前时间片的剩余时间，并根据任务的优先级和估算的执行时间，自主地决定是否继续执行当前任务，或者转而执行下一个任务。
+
+此外，requestIdleCallback 还可以在页面空闲时执行任务，避免了页面渲染被阻塞的情况。而 setTimeout 只能等到主线程空闲时才能执行任务。
+
+综上所述，使用 requestIdleCallback 来实现异步任务调度可以更好地平衡任务的执行时间和优先级，从而提高应用的性能和用户体验。
+- react hook 和普通函数有什么区别
+- OPTIOS 请求
+- 安装eslint 保存自动格式化
+- arco 阿里低代码工具
+- 代码if 复杂度计算
+- git 变基
+- qq
+``` 不应该在渲染期间调用 setState  SearchForm 中undefind 调用setState
+不应该在渲染期间调用 setState，因为它会在同一次渲染周期内触发额外的渲染，从而导致死循环或出现其他问题。为了避免这个问题，我们应该考虑将 setState 的调用移到当前组件的生命周期函数或事件处理程序中
+```
+- form.resetFields() 会刷新组件 导致接口重复调用
+- mac 查看用户文件npm包?
+- AxiosError 类型 error instanceof AxiosError  error.response.data
+- 帮我实现一下useModel 的代码
